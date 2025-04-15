@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopify - Login</title>
+    <title>JSON MART</title>
     <style>
         * {
             margin: 0;
@@ -40,11 +40,12 @@
 
         
         .login-container {
-            width: 50%;
+            width: 100%;
             padding: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            
         }
         
         .animation-container {
@@ -98,7 +99,7 @@
         
         .btn {
             width: 100%;
-            background-color: #4f46e5;
+            background-color: #6f4075;
             color: white;
             border: none;
             padding: 12px 0;
@@ -162,16 +163,15 @@
         
         .video-container video {
             position: absolute;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
             top: 50%;
             left: 50%;
+            width: 20%;      /* You can increase/decrease this */
+            height: 50%;     /* Or use 100% if you want it to fit vertically */
             transform: translate(-50%, -50%);
-            object-fit: cover;
+            z-index: 1;
             opacity: 1;
         }
+
         
         .animation-text {
             position: relative;
@@ -209,10 +209,11 @@
             }
             
             .login-container {
-                width: 100%;
-                order: 2;
-                padding: 30px 20px;
-                flex: 1;
+                width: 50%;
+                padding: 60px 40px; /* Increase padding for more white space */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
             
             .animation-container {
@@ -348,13 +349,11 @@
         <div class="animation-container">
             <div class="video-container">
                 <video id="loginVideo" autoplay loop muted playsinline>
-                    <source src="login animation.mp4" type="video/mp4">
+                    <source src="login video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="animation-text">
-                <h3>Let's start your shopping journey now</h3>
-            </div>
+            
         </div>
     </div>
 
