@@ -12,17 +12,17 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        body {
-        min-height: 100vh;
-        display: flex;
-        justify-content: flex-end; 
-        align-items: center;
-        background: url('login background.jpg') no-repeat center center fixed;
-        background-size: cover;
-        overflow: hidden;
-        padding: 15px 10% 15px 15px; 
-    }
-        
+                body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center; /* Keep center alignment */
+            align-items: center;
+            background: url('login background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            padding: 15px;
+        }
+
         .container {
             position: relative;
             width: 800px;
@@ -33,7 +33,10 @@
             overflow: hidden;
             border-radius: 12px;
             display: flex;
-        }
+            margin-left: auto; /* Pushes to the right */
+            margin-right: 5%; /* Distance from right edge */
+            margin-top: -5%; /* Negative margin moves it up - adjust this value as needed */
+}
         
         .login-container {
             width: 50%;
