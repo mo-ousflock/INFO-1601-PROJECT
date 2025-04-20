@@ -31,51 +31,87 @@
     <div class="page-overlay" data-page-overlay></div>
 
     <header>
-        <div class="header-primary">
+        <<div class="header-primary">
             <div class="container">
-                <a href="#" class="site-logo-link" id="siteLogo">
-                    <img src="./jsonlogo.svg" alt="JSON MART logo" width="120" height="36">
+              <a href="#" class="site-logo-link" id="siteLogo">
+                <img src="./jsonlogo.svg" alt="JSON MART logo" width="120" height="36">
+              </a>
+              <div class="header-search-area">
+                <input type="search" name="search" class="search-input-field" placeholder="Enter your product name...  (e.g. 'Dior')">
+                <button class="search-button">
+                  <ion-icon name="search-outline"></ion-icon>
+                </button>
+                <div class="search-dropdown">
+                  <ul class="search-results-list"></ul>
+                </div>
+              </div>
+              <div class="header-user-buttons">
+                <button class="action-button" title="Login">
+                  <ion-icon name="person-outline"></ion-icon>
+                </button>
+                <button class="action-button" title="Favourites" aria-label="Favourites">
+                  <ion-icon name="heart-outline"></ion-icon>
+                  <span class="item-count">0</span>
+                </button>
+                <div class="cart-container">
+                  <button class="action-button cart-button" title="Cart">
+                    <ion-icon name="bag-handle-outline" title="Cart"></ion-icon>
+                    <span class="item-count cart-count">0</span>
+                  </button>
+                  <div class="cart-dropdown">
+                    <h3 class="cart-dropdown-heading">Shopping Cart</h3>
+                    <ul class="cart-items-list">
+                      <li class="empty-cart">Your cart is empty.</li>
+                    </ul>
+                    <div class="cart-total">
+                      <span class="total-label">Total:</span>
+                      <span class="total-amount">$0.00</span>
+                    </div>
+                    <div class="cart-actions">
+                      <a href="#" class="button primary">View Cart</a>
+                      <button class="button checkout">Checkout</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           
+              <div class="mobile-bottom-navigation">
+                <button class="action-button" id="menu-open-button">
+                  <ion-icon name="menu-outline"></ion-icon>  </button>
+           
+                <a href="#" class="action-button" id="mobile-home-button">
+                  <ion-icon name="home-outline"></ion-icon>
                 </a>
-                <div class="header-search-area">
-                    <input type="search" name="search" class="search-input-field"
-                        placeholder="Enter your product name...  (e.g. 'Dior')">
-                    <button class="search-button">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </button>
-                    <div class="search-dropdown">  <ul class="search-results-list"></ul>
-                    </div>
+                <a href="#" class="action-button">
+                  <ion-icon name="bag-handle-outline"></ion-icon>
+                  <span class="item-count cart-count">0</span>
+                </a>
+              </div>
+           
+              <div class="mobile-navigation-menu">
+                <div class="menu-header">
+                  <h2 class="menu-heading">Menu</h2>
+                  <button class="menu-close-button" id="menu-close-button">
+                    <ion-icon name="close-outline"></ion-icon>  </button>
                 </div>
-                <div class="header-user-buttons">
-                    <button class="action-button" title="Login">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </button>
-                    <button class="action-button" title="Favourites" aria-label="Favourites">
-                        <ion-icon name="heart-outline"></ion-icon>
-                        <span class="item-count">0</span>
-                    </button>
-                    <div class="cart-container">
-                        <button class="action-button cart-button" title="Cart">
-                            <ion-icon name="bag-handle-outline" title="Cart"></ion-icon>
-                            <span class="item-count cart-count">0</span>
-                        </button>
-                        <div class="cart-dropdown">
-                            <h3 class="cart-dropdown-heading">Shopping Cart</h3>
-                            <ul class="cart-items-list">
-                                <li class="empty-cart">Your cart is empty.</li>
-                            </ul>
-                            <div class="cart-total">
-                                <span class="total-label">Total:</span>
-                                <span class="total-amount">$0.00</span>
-                            </div>
-                            <div class="cart-actions">
-                                <a href="#" class="button primary">View Cart</a>
-                                <button class="button checkout">Checkout</button>
-                            </div>
-                        </div>
-                    </div>
+                <ul class="mobile-menu-categories-list">
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">Shop Categories</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">Shipping & Order Tracking</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" class="menu-link">Contact Us</a>
+                  </li>
+                </ul>
+                <div class="menu-bottom">
+                  <ul class="menu-categories-list">
+                  </ul>
                 </div>
+              </div>
             </div>
-        </div>>
+          </div>
 
         <nav class="desktop-navigation-menu">
             <div class="container">
@@ -349,7 +385,7 @@
                       <div class="icon-container">
                           <ion-icon name="call-outline"></ion-icon>
                       </div>
-                      <a href="tel:+607936-8058" class="footer-navigation-link">(868) 662-2002</a>
+                      <a href="" class="footer-navigation-link">(868) 662-2002</a>
                   </li>
                   <li class="footer-navigation-item flex">
                       <div class="icon-container">
@@ -865,6 +901,34 @@
       pageOverlay.classList.remove('active'); 
     }
   });
+ 
+ const menuOpenButton = document.getElementById('menu-open-button');
+   const menuCloseButton = document.getElementById('menu-close-button');
+   const mobileMenu = document.querySelector('.mobile-navigation-menu');
+   
+   const mobileHomeButton = document.querySelector('.mobile-bottom-navigation a[href="#"]');
+
+   if (menuOpenButton && menuCloseButton && mobileMenu) {
+     menuOpenButton.addEventListener('click', () => {
+       mobileMenu.classList.add('active');
+     });
+
+     menuCloseButton.addEventListener('click', () => {
+       mobileMenu.classList.remove('active');
+     });
+   }
+
+   if (mobileHomeButton && pageOverlay) {
+     mobileHomeButton.addEventListener('click', (event) => {
+       event.preventDefault();
+       pageOverlay.classList.add('visible');
+       window.scrollTo(0, 0);
+
+       
+     });
+   }
+  
+  
   
     </script>
 
