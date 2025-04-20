@@ -12,7 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-                body {
+        body {
             min-height: 100vh;
             display: flex;
             justify-content: center; 
@@ -36,7 +36,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-}
+        }
 
         
         .login-container {
@@ -94,7 +94,7 @@
         }
         
         .input-field input::placeholder {
-            color: #aaa;
+            placeholder: #aaa;
         }
         
         .btn {
@@ -165,8 +165,8 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 20%;      /* You can increase/decrease this */
-            height: 50%;     /* Or use 100% if you want it to fit vertically */
+            width: 20%;      
+            height: 50%;     
             transform: translate(-50%, -50%);
             z-index: 1;
             opacity: 1;
@@ -193,7 +193,7 @@
             display: block;
         }
         
-        /* Enhanced Responsive Design for mobile devices */
+        
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -209,19 +209,24 @@
             }
             
             .login-container {
-                width: 50%;
-                padding: 60px 40px; /* Increase padding for more white space */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                width: 100%;
+                padding: 40px 20px;
+                order: 2;
             }
-            
+
             .animation-container {
                 width: 100%;
-                min-height: 200px;
+                height: 250px;
                 order: 1;
                 padding: 20px;
+                position: relative;
             }
+            .video-container video {
+                width: 100%;
+                height: auto%;
+            }
+
+
             
             .title {
                 font-size: 24px;
@@ -238,7 +243,7 @@
             }
             
             .input-field {
-                margin: 8px 0;
+                margin: 15px 0;
             }
             
             .input-field input {
@@ -255,7 +260,7 @@
             }
         }
         
-        /* For very small screens */
+        
         @media (max-width: 375px) {
             .social-container {
                 gap: 10px;
@@ -279,7 +284,7 @@
             }
         }
         
-        /* For landscape orientation on phones */
+        
         @media (max-height: 500px) and (orientation: landscape) {
             .container {
                 flex-direction: row;
@@ -333,17 +338,17 @@
             <h1 class="title">Sign In</h1>
             <p class="subtitle">Use your account to access your store</p>
             
-        
-            
-            <div class="input-field">
-                <input type="email" placeholder="Email" required />
-            </div>
-            <div class="input-field">
-                <input type="password" placeholder="Password" required />
-            </div>
-            
-            <a href="#" class="forgot-password">Forgot your password?</a>
-            <button class="btn">Sign In</button>
+            <form id="loginForm">
+                <div class="input-field">
+                    <input type="text" id="username" placeholder="Username" required />
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" placeholder="Password" required />
+                </div>
+                
+                <a href="#" class="forgot-password">Forgot your password?</a>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
         </div>
         
         <div class="animation-container">
@@ -353,12 +358,28 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-            
         </div>
     </div>
 
     <script>
-        // Ensure video is properly sized on load and resize
+  
+    //Login form 
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        if (username === 'bob' && password === 'password') {
+            
+            window.location.href = 'index.html'; 
+        } else {
+            alert('Invalid username or password');
+        }
+    });
+
+
+       
         function resizeVideo() {
             const loginVideo = document.getElementById('loginVideo');
             const container = document.querySelector('.animation-container');
@@ -377,11 +398,11 @@
             }
         }
         
-        // Call on load and on window resize
+        
         window.addEventListener('load', resizeVideo);
         window.addEventListener('resize', resizeVideo);
 
-        // Form validation effects
+        
         const inputs = document.querySelectorAll('input');
         inputs.forEach(input => {
             input.addEventListener('focus', () => {
@@ -393,10 +414,10 @@
             });
         });
         
-        // Check if device is mobile for better touch interactions
+        
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if (isMobile) {
-            // Add touch-specific enhancements if needed
+            
             document.querySelector('.btn').addEventListener('touchstart', function() {
                 this.style.transform = 'scale(0.98)';
             });
