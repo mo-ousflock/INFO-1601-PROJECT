@@ -2,339 +2,380 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSON MART</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON MART</title>
 
-  <link rel="shortcut icon" href="./images/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./icon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    
+        
+
+       
 
 </head>
 
 <body>
-
-  <div class="page-overlay" data-page-overlay></div>
-
-  <header>
-      <div class="header-primary">
-        <div class="container">
-          <a href="#" class="site-logo-link">
-            <img src="./images/jsonlogo.svg" alt="JSON MART logo" width="120" height="36">
-          </a>
-          <div class="header-search-area">
-            <input type="search" name="search" class="search-input-field" placeholder="Enter your product name...">
-            <button class="search-button">
-              <ion-icon name="search-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="header-user-buttons">
-            <button class="action-button">
-              <ion-icon name="person-outline"></ion-icon>
-            </button>
-            <button class="action-button">
-              <ion-icon name="heart-outline"></ion-icon>
-              <span class="item-count">0</span>
-            </button>
-            <button class="action-button">
-              <ion-icon name="bag-handle-outline"></ion-icon>
-              <span class="item-count">0</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <nav class="desktop-navigation-menu">
-          <div class="container">
-              <ul class="desktop-menu-categories-list">
-                  <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-
-                  <li class="menu-item">
-                      <a href="#" class="menu-link">Shop Categories</a>
-                      <div class="dropdown-content-panel">
-                          <ul class="dropdown-panel-list">
-                              <li class="panel-list-heading"><a href="#">Electronics</a></li>
-                              <li class="panel-list-item"><a href="#">Desktop</a></li>
-                              <li class="panel-list-item"><a href="#">Laptop</a></li>
-                              <li class="panel-list-item"><a href="#">Camera</a></li>
-                              <li class="panel-list-item"><a href="#">Tablet</a></li>
-                              <li class="panel-list-item"><a href="#">Headphone</a></li>
-                              <li class="panel-list-item"><a href="#">Accessories</a></li>
-                              <li class="panel-list-item"><a href="#">Gaming</a></li>
-                          </ul>
-                          <ul class="dropdown-panel-list">
-                              <li class="panel-list-heading"><a href="#">Fashion</a></li>
-                              <li class="panel-list-item"><a href="#">Men's Apparel</a></li>
-                              <li class="panel-list-item"><a href="#">Women's Apparel</a></li>
-                              <li class="panel-list-item"><a href="#">Footwear</a></li>
-                              <li class="panel-list-item"><a href="#">Accessories</a></li>
-                              <li class="panel-list-item"><a href="#">Outerwear</a></li>
-                              <li class="panel-list-item"><a href="#">Activewear</a></li>
-                              <li class="panel-list-item"><a href="#">Formalwear</a></li>
-                          </ul>
-                           <ul class="dropdown-panel-list">
-                              <li class="panel-list-heading"><a href="#">Beauty</a></li>
-                              <li class="panel-list-item"><a href="#">Makeup</a></li>
-                              <li class="panel-list-item"><a href="#">Skincare</a></li>
-                              <li class="panel-list-item"><a href="#">Haircare</a></li>
-                              <li class="panel-list-item"><a href="#">Nail Products</a></li>
-                              <li class="panel-list-item"><a href="#">Fragrances</a></li>
-                              <li class="panel-list-item"><a href="#">Body Care</a></li>
-                              <li class="panel-list-item"><a href="#">Tools & Accessories</a></li>
-                          </ul>
-                           <ul class="dropdown-panel-list">
-                              <li class="panel-list-heading"><a href="#">Home & Furniture</a></li>
-                              <li class="panel-list-item"><a href="#">Living Room</a></li>
-                              <li class="panel-list-item"><a href="#">Bedroom</a></li>
-                              <li class="panel-list-item"><a href="#">Kitchen & Dining</a></li>
-                              <li class="panel-list-item"><a href="#">Office Furniture</a></li>
-                              <li class="panel-list-item"><a href="#">Decor</a></li>
-                              <li class="panel-list-item"><a href="#">Lighting</a></li>
-                              <li class="panel-list-item"><a href="#">Outdoor Furniture</a></li>
-                          </ul>
-                           <ul class="dropdown-panel-list">
-                              <li class="panel-list-heading"><a href="#">Groceries</a></li>
-                              <li class="panel-list-item"><a href="#">Fruits</a></li>
-                              <li class="panel-list-item"><a href="#">Vegetables</a></li>
-                              <li class="panel-list-item"><a href="#">Meat & Poultry</a></li>
-                              <li class="panel-list-item"><a href="#">Dairy</a></li>
-                              <li class="panel-list-item"><a href="#">Snacks</a></li>
-                              <li class="panel-list-item"><a href="#">Beverages</a></li>
-                              <li class="panel-list-item"><a href="#">Pantry Staples</a></li>
-                          </ul>
-                           <ul class="dropdown-panel-list">
-                              <li class="panel-list-heading"><a href="#">Other</a></li>
-                              <li class="panel-list-item"><a href="#">Jewelry</a></li>
-                              <li class="panel-list-item"><a href="#">Toys</a></li>
-                              <li class="panel-list-item"><a href="#">Books</a></li>
-                              <li class="panel-list-item"><a href="#">Sports Equipment</a></li>
-                              <li class="panel-list-item"><a href="#">Pet Supplies</a></li>
-                              <li class="panel-list-item"><a href="#">Automotive</a></li>
-                          </ul>
-                      </div>
-                  </li>
-
-                  <li class="menu-item">
-                    <a href="#" class="menu-link">Shipping & Order Tracking</a>
-                    <ul class="dropdown-list">
-                        <li class="dropdown-item"><a href="#" class="dropdown-link">Track Order</a></li>
-                        <li class="dropdown-item"><a href="#" class="dropdown-link">Cancel Order</a></li>
-                        <li class="dropdown-item"><a href="#" class="dropdown-link">Return Item</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item">
-                    <a href="#" class="menu-link">Contact Us</a>
-                    <ul class="dropdown-list">
-                        <li class="dropdown-item"><a href="#" class="dropdown-link">Email</a></li>
-                        <li class="dropdown-item"><a href="#" class="dropdown-link">Phone</a></li>
-                        <li class="dropdown-item"><a href="#" class="dropdown-link">Physical Location</a></li>
-                        <li class="dropdown-item"><a href="#" class="dropdown-link">Online Chat</a></li>
-                    </ul>
-                  </li>
-
-              </ul>
-          </div>
-      </nav>
-
-      <div class="mobile-bottom-navigation">
-          <button class="action-button" data-mobile-menu-open-button><ion-icon name="menu-outline"></ion-icon></button>
-          <button class="action-button"><ion-icon name="bag-handle-outline"></ion-icon><span class="item-count">0</span></button>
-          <button class="action-button"><ion-icon name="home-outline"></ion-icon></button>
-          <button class="action-button"><ion-icon name="heart-outline"></ion-icon><span class="item-count">0</span></button>
-          <button class="action-button" data-mobile-menu-open-button><ion-icon name="grid-outline"></ion-icon></button>
-      </div>
-
-      <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
-          <div class="menu-header">
-              <h2 class="menu-heading">Menu</h2>
-              <button class="menu-close-button" data-mobile-menu-close-button><ion-icon name="close-outline"></ion-icon></button>
-          </div>
-          <ul class="mobile-menu-categories-list">
-              <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-
-              <li class="menu-item">
-                  <button class="accordion-button" data-accordion-toggle>
-                      <p class="menu-link">Shop Categories</p>
-                      <div><ion-icon name="add-outline" class="add-icon"></ion-icon><ion-icon name="remove-outline" class="remove-icon"></ion-icon></div>
-                  </button>
-                  <ul class="submenu-list" data-accordion-content>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Electronics</a></li>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Fashion</a></li>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Beauty</a></li>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Home & Furniture</a></li>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Groceries</a></li>
-                       <li class="submenu-item"><a href="#" class="submenu-link">Other</a></li>
-                  </ul>
-              </li>
-
-              <li class="menu-item">
-                  <button class="accordion-button" data-accordion-toggle>
-                      <p class="menu-link">Shipping & Order Tracking</p>
-                      <div><ion-icon name="add-outline" class="add-icon"></ion-icon><ion-icon name="remove-outline" class="remove-icon"></ion-icon></div>
-                  </button>
-                  <ul class="submenu-list" data-accordion-content>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Track Order</a></li>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Cancel Order</a></li>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Return Item</a></li>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Cancel Order</a></li>
-                  </ul>
-              </li>
-               <li class="menu-item">
-                  <button class="accordion-button" data-accordion-toggle>
-                      <p class="menu-link">Contact Us</p>
-                      <div><ion-icon name="add-outline" class="add-icon"></ion-icon><ion-icon name="remove-outline" class="remove-icon"></ion-icon></div>
-                  </button>
-                  <ul class="submenu-list" data-accordion-content>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Email</a></li>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Phone</a></li>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Physical Location</a></li>
-                      <li class="submenu-item"><a href="#" class="submenu-link">Online Chat</a></li>
-                  </ul>
-              </li>
-
-
-          </ul>
-          <div class="menu-bottom">
-              <ul class="menu-categories-list">
-                  <li class="menu-item">
-                      <button class="accordion-button" data-accordion-toggle>
-                          <p class="menu-link">Language</p>
-                          <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
-                      </button>
-                  </li>
-                  <li class="menu-item">
-                      <button class="accordion-button" data-accordion-toggle>
-                          <p class="menu-link">Currency</p>
-                          <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
-                      </button>
-                       <ul class="submenu-list" data-accordion-content>
-                          <li class="submenu-item"><a href="#" class="submenu-link">USD &dollar;</a></li>
-                          <li class="submenu-item"><a href="#" class="submenu-link">EUR &euro;</a></li>
-                      </ul>
-                  </li>
-              </ul>
-              </div>
-      </nav>
-  </header>
-
-
-  <main>
-
-    <div class="site-banner">
-      <div class="container">
-        <div class="slider-area has-scrollbar">
-          <div class="banner-slide-item"><img src="./images/slide1.png" alt="slide 1" class="banner-image"><div class="banner-content"></div></div>
-          <div class="banner-slide-item"><img src="./images/slide2.png" alt="slide 2" class="banner-image"><div class="banner-content"></div></div>
-      </div>
+    <div class="loading-overlay" id="loadingOverlay">
+        <img src="./jsonlogo.svg" alt="JSON MART logo" class="loading-logo">
     </div>
 
+    <div class="page-overlay" data-page-overlay></div>
 
-    <div class="product-display-section">
-      <div class="container">
+    <header>
+        <div class="header-primary">
+            <div class="container">
+                <a href="#" class="site-logo-link" id="siteLogo">
+                    <img src="./jsonlogo.svg" alt="JSON MART logo" width="120" height="36">
+                </a>
+                <div class="header-search-area">
+                    <input type="search" name="search" class="search-input-field"
+                        placeholder="Enter your product name...  (e.g. 'Dior')">
+                    <button class="search-button">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+                    <div class="search-dropdown">  <ul class="search-results-list"></ul>
+                    </div>
+                </div>
+                <div class="header-user-buttons">
+                    <button class="action-button" title="Login">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </button>
+                    <button class="action-button" title="Favourites" aria-label="Favourites">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <span class="item-count">0</span>
+                    </button>
+                    <div class="cart-container">
+                        <button class="action-button cart-button" title="Cart">
+                            <ion-icon name="bag-handle-outline" title="Cart"></ion-icon>
+                            <span class="item-count cart-count">0</span>
+                        </button>
+                        <div class="cart-dropdown">
+                            <h3 class="cart-dropdown-heading">Shopping Cart</h3>
+                            <ul class="cart-items-list">
+                                <li class="empty-cart">Your cart is empty.</li>
+                            </ul>
+                            <div class="cart-total">
+                                <span class="total-label">Total:</span>
+                                <span class="total-amount">$0.00</span>
+                            </div>
+                            <div class="cart-actions">
+                                <a href="#" class="button primary">View Cart</a>
+                                <button class="button checkout">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>>
 
-        <div class="product-area">
-          <div class="product-list-main">
-            <h2 class="section-title">New Products</h2>
-            <div class="product-grid-layout" id="api-product-grid">
-              </div>
-          </div>
+        <nav class="desktop-navigation-menu">
+            <div class="container">
+                <ul class="desktop-menu-categories-list">
+                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">Shop Categories</a>
+                        <div class="dropdown-content-panel">
+                            <ul class="dropdown-panel-list">
+                                <li class="panel-list-heading"><a href="#">Electronics</a></li>
+                                <li class="panel-list-item"><a href="#">Desktop</a></li>
+                                <li class="panel-list-item"><a href="#">Laptop</a></li>
+                                <li class="panel-list-item"><a href="#">Camera</a></li>
+                                <li class="panel-list-item"><a href="#">Tablet</a></li>
+                                <li class="panel-list-item"><a href="#">Headphone</a></li>
+                                <li class="panel-list-item"><a href="#">Accessories</a></li>
+                                <li class="panel-list-item"><a href="#">Gaming</a></li>
+                            </ul>
+                            <ul class="dropdown-panel-list">
+                                <li class="panel-list-heading"><a href="#">Fashion</a></li>
+                                <li class="panel-list-item"><a href="#">Men's Apparel</a></li>
+                                <li class="panel-list-item"><a href="#">Women's Apparel</a></li>
+                                <li class="panel-list-item"><a href="#">Footwear</a></li>
+                                <li class="panel-list-item"><a href="#">Accessories</a></li>
+                                <li class="panel-list-item"><a href="#">Outerwear</a></li>
+                                <li class="panel-list-item"><a href="#">Activewear</a></li>
+                                <li class="panel-list-item"><a href="#">Formalwear</a></li>
+                            </ul>
+                            <ul class="dropdown-panel-list">
+                                <li class="panel-list-heading"><a href="#">Beauty</a></li>
+                                <li class="panel-list-item"><a href="#">Makeup</a></li>
+                                <li class="panel-list-item"><a href="#">Skincare</a></li>
+                                <li class="panel-list-item"><a href="#">Haircare</a></li>
+                                <li class="panel-list-item"><a href="#">Nail Products</a></li>
+                                <li class="panel-list-item"><a href="#">Fragrances</a></li>
+                                <li class="panel-list-item"><a href="#">Body Care</a></li>
+                                <li class="panel-list-item"><a href="#">Tools & Accessories</a></li>
+                            </ul>
+                            <ul class="dropdown-panel-list">
+                                <li class="panel-list-heading"><a href="#">Home & Furniture</a></li>
+                                <li class="panel-list-item"><a href="#">Living Room</a></li>
+                                <li class="panel-list-item"><a href="#">Bedroom</a></li>
+                                <li class="panel-list-item"><a href="#">Kitchen & Dining</a></li>
+                                <li class="panel-list-item"><a href="#">Office Furniture</a></li>
+                                <li class="panel-list-item"><a href="#">Decor</a></li>
+                                <li class="panel-list-item"><a href="#">Lighting</a></li>
+                                <li class="panel-list-item"><a href="#">Outdoor Furniture</a></li>
+                            </ul>
+                            <ul class="dropdown-panel-list">
+                                <li class="panel-list-heading"><a href="#">Groceries</a></li>
+                                <li class="panel-list-item"><a href="#">Fruits</a></li>
+                                <li class="panel-list-item"><a href="#">Vegetables</a></li>
+                                <li class="panel-list-item"><a href="#">Meat & Poultry</a></li>
+                                <li class="panel-list-item"><a href="#">Dairy</a></li>
+                                <li class="panel-list-item"><a href="#">Snacks</a></li>
+                                <li class="panel-list-item"><a href="#">Beverages</a></li>
+                                <li class="panel-list-item"><a href="#">Pantry Staples</a></li>
+                            </ul>
+                            <ul class="dropdown-panel-list">
+                                <li class="panel-list-heading"><a href="#">Other</a></li>
+                                <li class="panel-list-item"><a href="#">Jewelry</a></li>
+                                <li class="panel-list-item"><a href="#">Toys</a></li>
+                                <li class="panel-list-item"><a href="#">Books</a></li>
+                                <li class="panel-list-item"><a href="#">Sports Equipment</a></li>
+                                <li class="panel-list-item"><a href="#">Pet Supplies</a></li>
+                                <li class="panel-list-item"><a href="#">Automotive</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">Shipping & Order Tracking</a>
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item"><a href="#" class="dropdown-link">Track Order</a></li>
+                            <li class="dropdown-item"><a href="#" class="dropdown-link">Cancel Order</a></li>
+                            <li class="dropdown-item"><a href="#" class="dropdown-link">Return Item</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">Contact Us</a>
+                        <ul class="dropdown-list">
+                            <li class="dropdown-item"><a href="#" class="dropdown-link">Email</a></li>
+                            <li class="dropdown-item"><a href="#" class="dropdown-link">Phone</a></li>
+                            <li class="dropdown-item"><a href="#" class="dropdown-link">Physical Location</a></li>
+                            <li class="dropdown-item"><a href="#" class="dropdown-link">Online Chat</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="mobile-bottom-navigation">
+            <button class="action-button" data-mobile-menu-open-button><ion-icon
+                    name="menu-outline"></ion-icon></button>
+            <button class="action-button"><ion-icon name="bag-handle-outline"></ion-icon><span
+                    class="item-count">0</span></button>
+            <button class="action-button"><ion-icon name="home-outline"></ion-icon></button>
+            <button class="action-button"><ion-icon name="heart-outline"></ion-icon><span
+                    class="item-count">0</span></button>
+            <button class="action-button" data-mobile-menu-open-button><ion-icon
+                    name="grid-outline"></ion-icon></button>
         </div>
-      </div>
-    </div>
 
-  </main>
-  <footer>
-      <div class="footer-navigation">
-        <div class="container">
-           <ul class="footer-navigation-list">
-            <li class="footer-navigation-item">
-              <h2 class="navigation-heading">Popular Categories</h2>
-            </li>
-            <li class="footer-navigation-item">
-              <a href="#" class="footer-navigation-link">Makeup</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a href="#" class="footer-navigation-link">Fragrances</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a href="#" class="footer-navigation-link">Cosmetic</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a href="#" class="footer-navigation-link">Food</a>
-           </li>
-            <li class="footer-navigation-item">
-              <a href="#" class="footer-navigation-link">Furniture</a>
-            </li>
-          </ul>
-          <ul class="footer-navigation-list">
-            <li class="footer-navigation-item">
-              <h2 class="navigation-heading">Shipping & Returns</h2>
-             </li>
-            <li class="footer-navigation-item">
-              <a href="#" class="footer-navigation-link">Refunds</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a href="#" class="footer-navigation-link">Track your order</a>
-            </li>
-             <li class="footer-navigation-item">
-              <a href="#" class="footer-navigation-link">Returns</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a href="#" class="footer-navigation-link">Warranty</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a href="#" class="footer-navigation-link">Liquidation</a>
-            </li>
-          </ul>
-          <ul class="footer-navigation-list">
-            <li class="footer-navigation-item">
-            <h2 class="navigation-heading">Contact</h2>
-            </li>
-            <li class="footer-navigation-item flex">
-              <div class="icon-container">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-              <address class="contact-info">
-                Real Street,
-                St Agustine, Trinidad.
-              </address>
-            </li>
-            <li class="footer-navigation-item flex">
-              <div class="icon-container">
-             <ion-icon name="call-outline"></ion-icon>
-              </div>
-              <a href="tel:+607936-8058" class="footer-navigation-link">(868) 662-2002</a>
-            </li>
-            <li class="footer-navigation-item flex">
-              <div class="icon-container">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-              <a href="mailto:example@gmail.com" class="footer-navigation-link">jsonmartisthebest@gmail.com</a>
-            </li>
-          </ul>
-          <ul class="footer-navigation-list">
-            <li class="footer-navigation-item">
-              <h2 class="navigation-heading">Follow Us</h2>
-           </li>
+        <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+            <div class="menu-header">
+                <h2 class="menu-heading">Menu</h2>
+                <button class="menu-close-button" data-mobile-menu-close-button><ion-icon
+                        name="close-outline"></ion-icon></button>
+            </div>
+            <ul class="mobile-menu-categories-list">
+                <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+
+                <li class="menu-item">
+                    <button class="accordion-button" data-accordion-toggle>
+                        <p class="menu-link">Shop Categories</p>
+                        <div><ion-icon name="add-outline" class="add-icon"></ion-icon><ion-icon name="remove-outline"
+                                class="remove-icon"></ion-icon></div>
+                    </button>
+                    <ul class="submenu-list" data-accordion-content>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Electronics</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Fashion</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Beauty</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Home & Furniture</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Groceries</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Other</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <button class="accordion-button" data-accordion-toggle>
+                        <p class="menu-link">Shipping & Order Tracking</p>
+                        <div><ion-icon name="add-outline" class="add-icon"></ion-icon><ion-icon name="remove-outline"
+                                class="remove-icon"></ion-icon></div>
+                    </button>
+                    <ul class="submenu-list" data-accordion-content>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Track Order</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Cancel Order</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Return Item</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Cancel Order</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <button class="accordion-button" data-accordion-toggle>
+                        <p class="menu-link">Contact Us</p>
+                        <div><ion-icon name="add-outline" class="add-icon"></ion-icon><ion-icon name="remove-outline"
+                                class="remove-icon"></ion-icon></div>
+                    </button>
+                    <ul class="submenu-list" data-accordion-content>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Email</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Phone</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Physical Location</a></li>
+                        <li class="submenu-item"><a href="#" class="submenu-link">Online Chat</a></li>
+                    </ul>
+                </li>
+
+
             </ul>
+            <div class="menu-bottom">
+                <ul class="menu-categories-list">
+                    <li class="menu-item">
+                        <button class="accordion-button" data-accordion-toggle>
+                            <p class="menu-link">Language</p>
+                            <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+                        </button>
+                    </li>
+                    <li class="menu-item">
+                        <button class="accordion-button" data-accordion-toggle>
+                            <p class="menu-link">Currency</p>
+                            <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+                        </button>
+                        <ul class="submenu-list" data-accordion-content>
+                            <li class="submenu-item"><a href="#" class="submenu-link">USD &dollar;</a></li>
+                            <li class="submenu-item"><a href="#" class="submenu-link">EUR &euro;</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <div class="site-banner">
+            <div class="container">
+                <div class="slider-area has-scrollbar">
+                    <div class="banner-slide-item"><img src="./slide1.png" alt="slide 1" class="banner-image">
+                        <div class="banner-content"></div>
+                    </div>
+                    <div class="banner-slide-item"><img src="./slide2.png" alt="slide 2" class="banner-image">
+                        <div class="banner-content"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+        <div class="product-display-section">
+            <div class="container">
+
+                <div class="product-area">
+                    <div class="product-list-main">
+                        <h2 class="section-title">New Products</h2>
+                        <div class="product-grid-layout" id="api-product-grid">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-navigation">
+            <div class="container">
+                <ul class="footer-navigation-list">
+                    <li class="footer-navigation-item">
+                        <h2 class="navigation-heading">Popular Categories</h2>
+                    </li>
+                    <li class="footer-navigation-item">
+                        <a href="#" class="footer-navigation-link">Makeup</a>
+                    </li>
+                    <li class="footer-navigation-item">
+                        <a href="#" class="footer-navigation-link">Fragrances</a>
+                    </li>
+                    <li class="footer-navigation-item">
+                        <a href="#" class="footer-navigation-link">Cosmetic</a>
+                    </li>
+                    <li class="footer-navigation-item">
+                        <a href="#" class="footer-navigation-link">Food</a>
+                    </li>
+                    <li class="footer-navigation-item">
+                        <a href="#" class="footer-navigation-link">Furniture</a>
+                    </li>
+                </ul>
+                <ul class="footer-navigation-list">
+                    <li class="footer-navigation-item">
+                        <h2 class="navigation-heading">Shipping & Returns</h2>
+                    </li>
+                    <li class="footer-navigation-item">
+                        <a href="#" class="footer-navigation-link">Refunds</a>
+                    </li>
+                    <li class="footer-navigation-item">
+                        <a href="#" class="footer-navigation-link">Track your order</a>
+                    </li>
+                    <li class="footer-navigation-item">
+                        <a href="#" class="footer-navigation-link">Returns</a>
+                    </li>
+                    <li class="footer-navigation-item">
+                        <a href="#" class="footer-navigation-link">Warranty</a>
+                    </li>
+                    <li class="footer-navigation-item">
+                        <a href="#" class="footer-navigation-link">Liquidation</a>
+                    </li>
+                </ul>
+                <ul class="footer-navigation-list">
+                  <li class="footer-navigation-item">
+                      <h2 class="navigation-heading">Contact</h2>
+                  </li>
+                  <li class="footer-navigation-item flex">
+                      <div class="icon-container">
+                          <ion-icon name="location-outline"></ion-icon>
+                      </div>
+                      <address class="contact-info">
+                          Real Street,
+                          St Agustine, Trinidad.
+                      </address>
+                  </li>
+                  <li class="footer-navigation-item flex">
+                      <div class="icon-container">
+                          <ion-icon name="call-outline"></ion-icon>
+                      </div>
+                      <a href="tel:+607936-8058" class="footer-navigation-link">(868) 662-2002</a>
+                  </li>
+                  <li class="footer-navigation-item flex">
+                      <div class="icon-container">
+                          <ion-icon name="mail-outline"></ion-icon>
+                      </div>
+                      <a href="mailto:example@gmail.com" class="footer-navigation-link">jsonmartisthebest@gmail.com</a>
+                  </li>
+              </ul>
+              <ul class="footer-navigation-list">
+                  <li class="footer-navigation-item">
+                      <h2 class="navigation-heading">Follow Us</h2>
+                  </li>
+              </ul>
+          </div>
       </div>
       <div class="footer-bottom-info">
-        <div class="container">
-          <img src="./images/payment.jpg" alt="payment method" class="payment-methods-image">
-          <p class="legal-information">
-            JSON MART🙌🏻.
-          </p>
-        </div>
+          <div class="container">
+              <img src="./payment.jpg" alt="payment method" class="payment-methods-image">
+              <p class="legal-information">
+                  JSON MART🙌🏻.
+              </p>
+          </div>
       </div>
   </footer>
 
+  <div class="cart-notification" id="cartNotification">Added to cart</div>
 
   <script src="./assets/js/script.js"></script>
 
@@ -342,82 +383,490 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
   <script>
+    const pageOverlay = document.querySelector('[data-page-overlay]');
     const productsContainer = document.getElementById('api-product-grid');
     const apiUrl = 'https://dummyjson.com/products';
-
+    const cartCountElementHeader = document.querySelector('.header-user-buttons .cart-button .cart-count');
+    const cartCountElementMobile = document.querySelector('.mobile-bottom-navigation .action-button ion-icon[name="bag-handle-outline"] + .item-count');
+    const cartNotification = document.getElementById('cartNotification');
+  
+    
+    let products = [];
+  
+    
+    const cartContainer = document.querySelector('.cart-container');
+    const cartButton = document.querySelector('.cart-button');
+    const cartDropdown = document.querySelector('.cart-dropdown');
+    const cartItemsList = document.querySelector('.cart-items-list');
+    const cartTotalAmount = document.querySelector('.cart-total .total-amount');
+  
+    
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    function updateCartCount() {
+    const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    if (cartCountElementHeader) {
+    cartCountElementHeader.textContent = itemCount > 0 ?
+    itemCount : '0';
+    }
+    const mobileCartButton = document.querySelector('.mobile-bottom-navigation .action-button:nth-child(2) .item-count');
+    if (mobileCartButton) {
+    mobileCartButton.textContent = itemCount > 0 ?
+    itemCount : '0';
+    }
+    }
+  
+    function showNotification(message) { 
+    cartNotification.textContent = message; 
+    cartNotification.classList.add('show');
+    setTimeout(() => {
+    cartNotification.classList.remove('show');
+    }, 2000);
+    }
+  
+    function addToCart(productId, addButton) {
+  const existingItem = cart.find(item => item.id === productId);
+  if (existingItem) {
+  existingItem.quantity++;
+  } else {
+  cart.push({ id: productId, quantity: 1 });
+  addButton.querySelector('ion-icon').style.color = '#6f4075';
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartCount();
+  showNotification("Added to cart");
+  console.log('Item added to cart:', productId, 'Current cart:', cart);
+  updateCartDropdown();  
+  }
+  
+  function removeFromCart(productId, listItem) {
+  const existingItemIndex = cart.findIndex(item => item.id === productId);
+  if (existingItemIndex !== -1) {
+  
+  if (cartItemsList.contains(listItem)) {
+  cartItemsList.removeChild(listItem);
+  }
+  if (cart[existingItemIndex].quantity > 1) {
+  cart[existingItemIndex].quantity--;
+  } else {
+  cart.splice(existingItemIndex, 1);
+  
+  const productCard = document.querySelector(`.product-showcase-item[data-product-id="${productId}"]`);
+  if (productCard) {
+  const addButton = productCard.querySelector('.add-to-cart-btn');
+  if (addButton) {
+  addButton.querySelector('ion-icon').style.color = '';
+  }
+  }
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartCount();
+  showNotification("Removed from cart");
+  console.log('Item removed from cart:', productId, 'Current cart:', cart);
+  }
+  updateCartDropdown();
+  }
+  
     function isValidUrl(string) {
-        try {
-            new URL(string);
-            return true;
-        } catch (e) {
-            return false;
-        }
+    try {
+    new URL(string);
+    return true;
+    } catch (e) {
+    return false;
     }
-
+    }
+  
+    
+    let favoritedProducts = JSON.parse(localStorage.getItem('favorites')) ||
+    [];
+  
+    function updateFavoritesCount(count) {
+    const headerHeartCount = document.querySelector('.header-user-buttons .action-button ion-icon[name="heart-outline"] + .item-count');
+    const mobileHeartButtons = document.querySelectorAll('.mobile-bottom-navigation .action-button');
+    let mobileHeartCount = null;
+  
+    mobileHeartButtons.forEach(button => {
+    const icon = button.querySelector('ion-icon[name="heart-outline"]');
+    if (icon) {
+    mobileHeartCount = button.querySelector('.item-count');
+    }
+    });
+    if (headerHeartCount) {
+    headerHeartCount.textContent = count;
+    console.log('Updated header favorites count to:', count);
+    } else {
+    console.warn('Header heart count element not found');
+    }
+  
+    if (mobileHeartCount) {
+    mobileHeartCount.textContent = count;
+    console.log('Updated mobile favorites count to:', count);
+    } else {
+    console.warn('Mobile heart count element not found');
+    }
+    }
+  
     function createProductCard(product) {
-        const productShowcase = document.createElement('div');
-        productShowcase.classList.add('product-showcase-item');
-
-        const imageUrl = isValidUrl(product.thumbnail)
-            ? product.thumbnail
-            : 'https://placehold.co/300x300/E5E7EB/1F2937?text=No+Image';
-
-        productShowcase.innerHTML = `
-            <div class="showcase-image-container">
-                <img src="${imageUrl}" alt="${product.title}" width="300" class="product-image default-image">
-                <img src="${imageUrl}" alt="${product.title}" width="300" class="product-image hover-image">
-
-                <div class="showcase-action-buttons">
-                    <button class="action-button">
-                      <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-                </div>
-            </div>
-
-            <div class="showcase-details">
-                <a href="#">
-                  <h3 class="showcase-title">${product.title}</h3>
-                </a>
-                <div class="price-info">
-                    <p class="current-price">$${product.price.toFixed(2)}</p>
-                    ${product.discountPercentage ? `<p class="original-price">$${(product.price / (1 - product.discountPercentage / 100)).toFixed(2)}</p>` : ''}
-                </div>
-            </div>
-        `;
-        const imgElements = productShowcase.querySelectorAll('.product-image');
-        imgElements.forEach(img => {
-            img.onerror = function() {
-                this.src = 'https://placehold.co/300x300/E5E7EB/1F2937?text=Image+Error';
-                this.alt = 'Image not available';
-            };
-        });
-        return productShowcase;
+    const productShowcase = document.createElement('div');
+    productShowcase.classList.add('product-showcase-item');
+    productShowcase.dataset.productId = product.id; 
+  
+    const imageUrl = isValidUrl(product.thumbnail)
+    ? product.thumbnail
+    : 'https://placehold.co/300x300/E5E7EB/1F2937?text=No+Image';
+  
+    const isFavorited = favoritedProducts.includes(product.id.toString());
+    const heartIcon = isFavorited ? 'heart' : 'heart-outline';
+    const favoritedClass = isFavorited ? 'favorited' : '';
+    productShowcase.innerHTML = `
+    <div class="showcase-image-container">
+    <img src="${imageUrl}" alt="${product.title}" width="300" class="product-image default-image">
+    <img src="${imageUrl}" alt="${product.title}" width="300" class="product-image hover-image">
+  
+    <div class="showcase-action-buttons">
+    <button class="action-button add-to-cart-btn">
+    <ion-icon name="bag-handle-outline"></ion-icon> </button>
+    <button class="action-button ${favoritedClass}" title="Favourites" aria-label="Favourites">
+    <ion-icon name="${heartIcon}"></ion-icon>
+    </button>
+    </div>
+    </div>
+  
+    <div class="showcase-details">
+    <a href="#">
+    <h3 class="showcase-title">${product.title}</h3>
+    </a>
+    <div class="price-info">
+    <p class="current-price">$${product.price.toFixed(2)}</p>
+    ${product.discountPercentage
+    ? `<p class="original-price">$${(product.price / (1 - product.discountPercentage / 100)).toFixed(2)}</p>` : ''}
+    </div>
+    </div>
+    `;
+    const imgElements = productShowcase.querySelectorAll('.product-image');
+    imgElements.forEach(img => {
+    img.onerror = function () {
+    this.src = 'https://placehold.co/300x300/E5E7EB/1F2937?text=Image+Error';
+    this.alt = 'Image not available';
+    };
+    });
+    return productShowcase;
     }
-
+  
+    function toggleFavorite(productId, favoriteBtn) {
+    productId = productId.toString();
+  
+    const index = favoritedProducts.indexOf(productId);
+    const heartIcon = favoriteBtn.querySelector('ion-icon');
+  
+    if (index === -1) {
+    favoritedProducts.push(productId);
+    favoriteBtn.classList.add('favorited');
+    heartIcon.setAttribute('name', 'heart');
+    console.log('Added product to favorites:', productId);
+    } else {
+    favoritedProducts.splice(index, 1);
+    favoriteBtn.classList.remove('favorited');
+    heartIcon.setAttribute('name', 'heart-outline');
+    console.log('Removed product from favorites:', productId);
+    }
+  
+    localStorage.setItem('favorites', JSON.stringify(favoritedProducts));
+    updateFavoritesCount(favoritedProducts.length);
+    }
+  
+    function setupLoginLink() {
+    const personButton = document.querySelector('.header-user-buttons .action-button ion-icon[name="person-outline"]');
+  
+    if (personButton) {
+    const parentButton = personButton.closest('.action-button');
+  
+    if (parentButton) {
+    parentButton.addEventListener('click', function () {
+    window.location.href = 'login.html';
+    });
+    parentButton.style.cursor = 'pointer';
+    console.log('Added login link to person icon');
+    } else {
+    console.warn('Could not find parent button for person icon');
+    }
+    } else {
+    console.warn('Person icon not found in header');
+    }
+    }
+  
+    function setupLoadingAnimation() {
+    const loadingOverlay = document.getElementById('loadingOverlay');
+    const navLinks = document.querySelectorAll('nav a');
+  
+    navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    loadingOverlay.classList.add('visible');
+    setTimeout(function () {
+    if (href && href !== '#') {
+    window.location.href = href;
+    } else {
+    setTimeout(function () {
+    loadingOverlay.classList.remove('visible');
+    }, 100);
+    }
+    }, 1500);
+    });
+    });
+  
+    const siteLogo = document.getElementById('siteLogo');
+    if (siteLogo) {
+    siteLogo.addEventListener('click', function (e) {
+    e.preventDefault();
+    loadingOverlay.classList.add('visible');
+    setTimeout(function () {
+    setTimeout(function () {
+    loadingOverlay.classList.remove('visible');
+    }, 100);
+    }, 1500);
+    });
+    }
+    }
+  
     async function fetchProducts() {
-        try {
-            const response = await fetch(apiUrl);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-            const products = data.products;
+    try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    products = data.products; 
+  
+    productsContainer.innerHTML = '';
+  
+    products.forEach(product => {
+    const productCard = createProductCard(product);
+    productsContainer.appendChild(productCard);
+    });
+  
+    } catch (error) {
+    console.error('Error fetching products:', error);
+    productsContainer.innerHTML = '<p style="color: red; text-align: center; grid-column: 1 / -1;">Failed to load products. Please try again later.</p>';
+    } finally {
+    
+    updateCartDropdown();
+    }
+    }
+  
+    
+  
+    //For Cart dropping down
+    function toggleCartDropdown() {
+    cartContainer.classList.toggle('active');
+    }
+    
+  document.addEventListener('click', function (event) {
+  if (!cartContainer.contains(event.target) && event.target !== cartButton) {
+  cartContainer.classList.remove('active');
+  }
+  });
+  
+  cartContainer.addEventListener('click', function(event) {
+  event.stopPropagation(); 
+  });
+  
+    
+    cartButton.addEventListener('click', toggleCartDropdown);
 
-            productsContainer.innerHTML = '';
+   
+  const mobileCartButton = document.querySelector('.mobile-bottom-navigation .action-button ion-icon[name="bag-handle-outline"]').closest('.action-button');
+  if (mobileCartButton) {
+  mobileCartButton.addEventListener('click', toggleCartDropdown);
+  }
 
-            products.forEach(product => {
-                const productCard = createProductCard(product);
-                productsContainer.appendChild(productCard);
-            });
-
-        } catch (error) {
-            console.error('Error fetching products:', error);
-            productsContainer.innerHTML = '<p style="color: red; text-align: center; grid-column: 1 / -1;">Failed to load products. Please try again later.</p>';
+  document.addEventListener('click', function (event) {
+  if (!cartContainer.contains(event.target) && !event.target.classList.contains('cart-button')) {
+  cartContainer.classList.remove('active');
+  }
+  });
+  
+    
+    document.addEventListener('click', function (event) {
+  if (!cartContainer.contains(event.target) && !event.target.classList.contains('cart-button')) {
+  cartContainer.classList.remove('active');
+  }
+  });
+  
+    
+    function updateCartDropdown() {
+    
+    if (!products || products.length === 0) {
+    console.log("Cart update: No products data yet.");
+    return;
+    }
+  
+    cartItemsList.innerHTML = ''; 
+    let total = 0;
+  
+    if (cart.length === 0) {
+    cartItemsList.innerHTML = '<li class="empty-cart">Your cart is empty.</li>';
+    } else {
+    cart.forEach(item => {
+    const product = products.find(p => p.id === item.id); 
+    if (product) {
+    const listItem = document.createElement('li');
+    listItem.classList.add('cart-item');
+    listItem.innerHTML = `
+    <img src="${product.thumbnail}" alt="${product.title}" class="item-image">
+    <div class="item-details">
+    <h4 class="item-title">${product.title}</h4>
+    <p class="item-price">$${(product.price * item.quantity).toFixed(2)} (${item.quantity})</p>
+    </div>
+    <button class="remove-item-btn" data-product-id="${product.id}">
+    <ion-icon name="close-outline"></ion-icon>
+    </button>
+    `;
+    cartItemsList.appendChild(listItem);
+    total += product.price * item.quantity;
+    }
+    });
+    }
+    cartTotalAmount.textContent = `$${total.toFixed(2)}`;
+    updateCartCount(); 
+    }
+  
+    
+    cartItemsList.addEventListener('click', function (event) {
+  if (event.target.classList.contains('remove-item-btn') || event.target.closest('.remove-item-btn')) {
+  const productId = parseInt(event.target.closest('.remove-item-btn').dataset.productId);
+  const listItem = event.target.closest('.cart-item');
+  removeFromCart(productId, listItem);  
+  updateCartDropdown();
+  }
+  });
+  
+    
+  
+    
+    document.addEventListener('click', function (event) {
+    const target = event.target;
+  
+    
+    if (target.closest('.showcase-action-buttons .add-to-cart-btn') || target.closest('.showcase-action-buttons .add-to-cart-btn ion-icon[name="bag-handle-outline"]')) {
+  const productCard = target.closest('.product-showcase-item');
+  if (productCard) {
+  const productId = parseInt(productCard.dataset.productId);
+  const addButton = target.closest('.add-to-cart-btn');
+  const existingCartItem = cart.find(item => item.id === productId);
+  if (!existingCartItem) {
+  addToCart(productId, addButton);
+  }
+  else {
+  
+  removeFromCart(productId, productCard);
+  }
+  }
+  }
+  
+    
+    if (target.closest('.showcase-action-buttons .action-button:not(.add-to-cart-btn)') ||
+    target.closest('.showcase-action-buttons ion-icon[name="heart-outline"]') ||
+    target.closest('.showcase-action-buttons ion-icon[name="heart"]')) {
+    const productCard = target.closest('.product-showcase-item');
+    if (!productCard) return;
+  
+    const productId = productCard.dataset.productId;
+    if (!productId) {
+    console.error('Product ID not found on card:', productCard);
+    return;
+    }
+  
+    const favoriteBtn = productCard.querySelector('.showcase-action-buttons .action-button:not(.add-to-cart-btn)');
+    if (!favoriteBtn) return;
+  
+    toggleFavorite(productId, favoriteBtn);
+    }
+    });
+  
+    
+    updateCartCount();
+  
+    document.addEventListener('DOMContentLoaded', function () {
+    const loadingOverlay = document.getElementById('loadingOverlay');
+  
+    loadingOverlay.classList.add('visible');
+  
+    favoritedProducts = JSON.parse(localStorage.getItem('favorites')) || [];
+    console.log('Initial favorites loaded:', favoritedProducts.length, 'products');
+  
+    setupLoginLink();
+    setupLoadingAnimation();
+    updateFavoritesCount(favoritedProducts.length);
+  
+    fetchProducts().then(() => {
+    setTimeout(function () {
+    loadingOverlay.classList.remove('visible');
+    }, 500);
+    });
+    });
+    const searchInput = document.querySelector('.search-input-field');
+    const searchDropdown = document.querySelector('.search-dropdown');
+    const searchResultsList = document.querySelector('.search-results-list');
+    
+    function displayProducts(results) {
+        productsContainer.innerHTML = '';  
+        if (results.length === 0) {
+            productsContainer.innerHTML = '<p style="color: red; text-align: center; grid-column: 1 / -1;">No products found.</p>';
+            return;
         }
+    
+        results.forEach(product => {
+            const productCard = createProductCard(product); 
+            productsContainer.appendChild(productCard);
+        });
+    }
+    
+    function displaySearchResults(results) {
+    searchResultsList.innerHTML = '';
+    if (results.length === 0) {
+      searchResultsList.innerHTML = '<li>No results found</li>';
+      searchDropdown.classList.remove('active');
+      pageOverlay.classList.remove('active'); 
+      return;
     }
 
-    fetchProducts();
-  </script>
+    results.forEach(product => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <img src="${product.thumbnail}" alt="${product.title}" class="search-result-image">
+        ${product.title}
+      `;
+      li.addEventListener('click', () => {
+        
+        console.log('Clicked on:', product.title);
+        searchInput.value = product.title; 
+        searchDropdown.classList.remove('active');
+        pageOverlay.classList.remove('active');  
+      });
+      searchResultsList.appendChild(li);
+    });
+    searchDropdown.classList.add('active');  
+    pageOverlay.classList.add('active'); 
+  }
+
+  searchInput.addEventListener('input', function() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredProducts = products.filter(product => {
+      return product.title.toLowerCase().includes(searchTerm);
+    });
+    displaySearchResults(filteredProducts);
+  });
+
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('.header-search-area')) {
+      searchDropdown.classList.remove('active');
+      pageOverlay.classList.remove('active'); 
+    }
+  });
+  
+    </script>
 
 </body>
 
