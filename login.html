@@ -371,6 +371,7 @@
         const password = document.getElementById('password').value;
         
         if (username === 'bob' && password === 'password') {
+            localStorage.setItem('isLoggedIn', 'true');
             
             window.location.href = 'index.html'; 
         } else {
