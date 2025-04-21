@@ -403,7 +403,6 @@
             if (listItemOrCard && listItemOrCard.classList.contains('cart-item') && cartItemsList.contains(listItemOrCard)) {
                  cartItemsList.removeChild(listItemOrCard);
             }
-
             if (cart[existingItemIndex].quantity > 1) {
                 cart[existingItemIndex].quantity--;
             } else {
@@ -421,7 +420,7 @@
             showNotification("Removed from cart");
             console.log('Item removed/decremented:', productId, 'Current cart:', cart);
         }
-        updateCartDropdown();
+        updateCartDropdown(); 
     }
 
 
@@ -655,8 +654,7 @@
                         </div>
                         <button class="remove-item-btn" data-product-id="${product.id}" aria-label="Remove item">
                             <ion-icon name="close-outline"></ion-icon>
-                        </button>
-                    `;
+                        </button> `; 
                     cartItemsList.appendChild(listItem);
                     total += product.price * item.quantity;
                 } else {
@@ -669,12 +667,12 @@
     }
 
 
-    document.addEventListener('click', function (event) {
+    cartItemsList.addEventListener('click', function (event) {
         const removeButton = event.target.closest('.remove-item-btn');
         if (removeButton) {
-            const productId = parseInt(removeButton.dataset.productId);
+            const productId = parseInt(removeButton.dataset.productId); 
             const listItem = event.target.closest('.cart-item');
-            removeFromCart(productId, listItem);
+            removeFromCart(productId, listItem); 
         }
     });
 
@@ -762,6 +760,7 @@
                  loadingOverlay.classList.remove('visible');
             }, 500);
         });
+
 
 
     });
