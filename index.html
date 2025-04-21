@@ -16,14 +16,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    
-        
-
-       
-
 </head>
 
 <body>
+    <div class="login-required-modal" id="loginRequiredModal">
+        <div class="modal-content">
+            <p class="modal-message">You must login first to add items to your cart or favourites.</p>
+            <button class="modal-login-button" id="modalLoginButton">Login</button>
+        </div>
+    </div>
+    <div class="mobile-search-overlay" id="mobileSearchOverlay">
+        <div class="mobile-search-container">
+          <div class="mobile-search-header">
+            <input type="search" class="mobile-search-input" placeholder="Search products...">
+            <button class="mobile-search-close-button">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+          <ul class="mobile-search-results"></ul>
+        </div>
+      </div>
+
     <div class="loading-overlay" id="loadingOverlay">
         <img src="./jsonlogo.svg" alt="JSON MART logo" class="loading-logo">
     </div>
@@ -31,13 +44,13 @@
     <div class="page-overlay" data-page-overlay></div>
 
     <header>
-        <<div class="header-primary">
+        <div class="header-primary">
             <div class="container">
               <a href="#" class="site-logo-link" id="siteLogo">
                 <img src="./jsonlogo.svg" alt="JSON MART logo" width="120" height="36">
               </a>
               <div class="header-search-area">
-                <input type="search" name="search" class="search-input-field" placeholder="Enter your product name...  (e.g. 'Dior')">
+                <input type="search" name="search" class="search-input-field" placeholder="Enter your product name...  (e.g. 'Dior')">
                 <button class="search-button">
                   <ion-icon name="search-outline"></ion-icon>
                 </button>
@@ -74,20 +87,10 @@
                   </div>
                 </div>
               </div>
-           
-              <div class="mobile-bottom-navigation">
-                <button class="action-button" id="menu-open-button">
-                  <ion-icon name="menu-outline"></ion-icon>  </button>
-           
-                <a href="#" class="action-button" id="mobile-home-button">
-                  <ion-icon name="home-outline"></ion-icon>
-                </a>
-                <a href="#" class="action-button">
-                  <ion-icon name="bag-handle-outline"></ion-icon>
-                  <span class="item-count cart-count">0</span>
-                </a>
-              </div>
-           
+
+
+              
+
               <div class="mobile-navigation-menu">
                 <div class="menu-header">
                   <h2 class="menu-heading">Menu</h2>
@@ -116,7 +119,7 @@
         <nav class="desktop-navigation-menu">
             <div class="container">
                 <ul class="desktop-menu-categories-list">
-                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>
 
                     <li class="menu-item">
                         <a href="#" class="menu-link">Shop Categories</a>
@@ -205,93 +208,6 @@
             </div>
         </nav>
 
-        <div class="mobile-bottom-navigation">
-            <button class="action-button" data-mobile-menu-open-button><ion-icon
-                    name="menu-outline"></ion-icon></button>
-            <button class="action-button"><ion-icon name="bag-handle-outline"></ion-icon><span
-                    class="item-count">0</span></button>
-            <button class="action-button"><ion-icon name="home-outline"></ion-icon></button>
-            <button class="action-button"><ion-icon name="heart-outline"></ion-icon><span
-                    class="item-count">0</span></button>
-            <button class="action-button" data-mobile-menu-open-button><ion-icon
-                    name="grid-outline"></ion-icon></button>
-        </div>
-
-        <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
-            <div class="menu-header">
-                <h2 class="menu-heading">Menu</h2>
-                <button class="menu-close-button" data-mobile-menu-close-button><ion-icon
-                        name="close-outline"></ion-icon></button>
-            </div>
-            <ul class="mobile-menu-categories-list">
-                <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-
-                <li class="menu-item">
-                    <button class="accordion-button" data-accordion-toggle>
-                        <p class="menu-link">Shop Categories</p>
-                        <div><ion-icon name="add-outline" class="add-icon"></ion-icon><ion-icon name="remove-outline"
-                                class="remove-icon"></ion-icon></div>
-                    </button>
-                    <ul class="submenu-list" data-accordion-content>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Electronics</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Fashion</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Beauty</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Home & Furniture</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Groceries</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Other</a></li>
-                    </ul>
-                </li>
-
-                <li class="menu-item">
-                    <button class="accordion-button" data-accordion-toggle>
-                        <p class="menu-link">Shipping & Order Tracking</p>
-                        <div><ion-icon name="add-outline" class="add-icon"></ion-icon><ion-icon name="remove-outline"
-                                class="remove-icon"></ion-icon></div>
-                    </button>
-                    <ul class="submenu-list" data-accordion-content>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Track Order</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Cancel Order</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Return Item</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Cancel Order</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <button class="accordion-button" data-accordion-toggle>
-                        <p class="menu-link">Contact Us</p>
-                        <div><ion-icon name="add-outline" class="add-icon"></ion-icon><ion-icon name="remove-outline"
-                                class="remove-icon"></ion-icon></div>
-                    </button>
-                    <ul class="submenu-list" data-accordion-content>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Email</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Phone</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Physical Location</a></li>
-                        <li class="submenu-item"><a href="#" class="submenu-link">Online Chat</a></li>
-                    </ul>
-                </li>
-
-
-            </ul>
-            <div class="menu-bottom">
-                <ul class="menu-categories-list">
-                    <li class="menu-item">
-                        <button class="accordion-button" data-accordion-toggle>
-                            <p class="menu-link">Language</p>
-                            <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
-                        </button>
-                    </li>
-                    <li class="menu-item">
-                        <button class="accordion-button" data-accordion-toggle>
-                            <p class="menu-link">Currency</p>
-                            <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
-                        </button>
-                        <ul class="submenu-list" data-accordion-content>
-                            <li class="submenu-item"><a href="#" class="submenu-link">USD &dollar;</a></li>
-                            <li class="submenu-item"><a href="#" class="submenu-link">EUR &euro;</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
     </header>
 
 
@@ -299,11 +215,11 @@
 
         <div class="site-banner">
             <div class="container">
-                <div class="slider-area has-scrollbar">
+                 <div class="slider-area has-scrollbar">
                     <div class="banner-slide-item"><img src="./slide1.png" alt="slide 1" class="banner-image">
                         <div class="banner-content"></div>
                     </div>
-                    <div class="banner-slide-item"><img src="./slide2.png" alt="slide 2" class="banner-image">
+                 <div class="banner-slide-item"><img src="./slide2.png" alt="slide 2" class="banner-image">
                         <div class="banner-content"></div>
                     </div>
                 </div>
@@ -312,13 +228,13 @@
 
 
         <div class="product-display-section">
-            <div class="container">
+                <div class="container">
 
                 <div class="product-area">
                     <div class="product-list-main">
                         <h2 class="section-title">New Products</h2>
                         <div class="product-grid-layout" id="api-product-grid">
-                            </div>
+                               </div>
                     </div>
                 </div>
             </div>
@@ -332,25 +248,25 @@
                     <li class="footer-navigation-item">
                         <h2 class="navigation-heading">Popular Categories</h2>
                     </li>
-                    <li class="footer-navigation-item">
+                     <li class="footer-navigation-item">
                         <a href="#" class="footer-navigation-link">Makeup</a>
                     </li>
                     <li class="footer-navigation-item">
-                        <a href="#" class="footer-navigation-link">Fragrances</a>
+                         <a href="#" class="footer-navigation-link">Fragrances</a>
                     </li>
                     <li class="footer-navigation-item">
                         <a href="#" class="footer-navigation-link">Cosmetic</a>
                     </li>
-                    <li class="footer-navigation-item">
+                      <li class="footer-navigation-item">
                         <a href="#" class="footer-navigation-link">Food</a>
                     </li>
                     <li class="footer-navigation-item">
-                        <a href="#" class="footer-navigation-link">Furniture</a>
+                       <a href="#" class="footer-navigation-link">Furniture</a>
                     </li>
                 </ul>
                 <ul class="footer-navigation-list">
                     <li class="footer-navigation-item">
-                        <h2 class="navigation-heading">Shipping & Returns</h2>
+                       <h2 class="navigation-heading">Shipping & Returns</h2>
                     </li>
                     <li class="footer-navigation-item">
                         <a href="#" class="footer-navigation-link">Refunds</a>
@@ -359,21 +275,21 @@
                         <a href="#" class="footer-navigation-link">Track your order</a>
                     </li>
                     <li class="footer-navigation-item">
-                        <a href="#" class="footer-navigation-link">Returns</a>
+                       <a href="#" class="footer-navigation-link">Returns</a>
                     </li>
                     <li class="footer-navigation-item">
                         <a href="#" class="footer-navigation-link">Warranty</a>
-                    </li>
+                       </li>
                     <li class="footer-navigation-item">
                         <a href="#" class="footer-navigation-link">Liquidation</a>
                     </li>
                 </ul>
-                <ul class="footer-navigation-list">
+                  <ul class="footer-navigation-list">
                   <li class="footer-navigation-item">
                       <h2 class="navigation-heading">Contact</h2>
                   </li>
                   <li class="footer-navigation-item flex">
-                      <div class="icon-container">
+                     <div class="icon-container">
                           <ion-icon name="location-outline"></ion-icon>
                       </div>
                       <address class="contact-info">
@@ -393,19 +309,19 @@
                       </div>
                       <a href="mailto:example@gmail.com" class="footer-navigation-link">jsonmartisthebest@gmail.com</a>
                   </li>
-              </ul>
+                 </ul>
               <ul class="footer-navigation-list">
                   <li class="footer-navigation-item">
                       <h2 class="navigation-heading">Follow Us</h2>
                   </li>
               </ul>
-          </div>
+             </div>
       </div>
       <div class="footer-bottom-info">
           <div class="container">
               <img src="./payment.jpg" alt="payment method" class="payment-methods-image">
               <p class="legal-information">
-                  JSON MART🙌🏻.
+                  JSON MART.
               </p>
           </div>
       </div>
@@ -422,515 +338,634 @@
     const pageOverlay = document.querySelector('[data-page-overlay]');
     const productsContainer = document.getElementById('api-product-grid');
     const apiUrl = 'https://dummyjson.com/products';
-    const cartCountElementHeader = document.querySelector('.header-user-buttons .cart-button .cart-count');
-    const cartCountElementMobile = document.querySelector('.mobile-bottom-navigation .action-button ion-icon[name="bag-handle-outline"] + .item-count');
+    const cartCountElements = document.querySelectorAll('.cart-count');
+    const favoritesCountElements = document.querySelectorAll('.header-user-buttons .action-button[title="Favourites"] .item-count, .mobile-bottom-navigation .action-button[title="Favourites"] .item-count');
     const cartNotification = document.getElementById('cartNotification');
-  
-    
+    const loginRequiredModal = document.getElementById('loginRequiredModal');
+    const modalLoginButton = document.getElementById('modalLoginButton');
+
+    let isLoggedIn = false;
+
+
     let products = [];
-  
-    
+
+
     const cartContainer = document.querySelector('.cart-container');
     const cartButton = document.querySelector('.cart-button');
     const cartDropdown = document.querySelector('.cart-dropdown');
     const cartItemsList = document.querySelector('.cart-items-list');
     const cartTotalAmount = document.querySelector('.cart-total .total-amount');
-  
-    
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  
-    function updateCartCount() {
-    const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-    if (cartCountElementHeader) {
-    cartCountElementHeader.textContent = itemCount > 0 ?
-    itemCount : '0';
+
+    function updateAllCartCounts() {
+        const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCountElements.forEach(el => {
+            el.textContent = itemCount > 0 ? itemCount : '0';
+        });
     }
-    const mobileCartButton = document.querySelector('.mobile-bottom-navigation .action-button:nth-child(2) .item-count');
-    if (mobileCartButton) {
-    mobileCartButton.textContent = itemCount > 0 ?
-    itemCount : '0';
+
+    function showNotification(message) {
+        cartNotification.textContent = message;
+        cartNotification.classList.add('show');
+        setTimeout(() => {
+            cartNotification.classList.remove('show');
+        }, 2000);
     }
+
+    function getProductById(productId) {
+        return products.find(p => p.id === productId);
     }
-  
-    function showNotification(message) { 
-    cartNotification.textContent = message; 
-    cartNotification.classList.add('show');
-    setTimeout(() => {
-    cartNotification.classList.remove('show');
-    }, 2000);
-    }
-  
+
+
     function addToCart(productId, addButton) {
-  const existingItem = cart.find(item => item.id === productId);
-  if (existingItem) {
-  existingItem.quantity++;
-  } else {
-  cart.push({ id: productId, quantity: 1 });
-  addButton.querySelector('ion-icon').style.color = '#6f4075';
-  }
-  localStorage.setItem('cart', JSON.stringify(cart));
-  updateCartCount();
-  showNotification("Added to cart");
-  console.log('Item added to cart:', productId, 'Current cart:', cart);
-  updateCartDropdown();  
-  }
-  
-  function removeFromCart(productId, listItem) {
-  const existingItemIndex = cart.findIndex(item => item.id === productId);
-  if (existingItemIndex !== -1) {
-  
-  if (cartItemsList.contains(listItem)) {
-  cartItemsList.removeChild(listItem);
-  }
-  if (cart[existingItemIndex].quantity > 1) {
-  cart[existingItemIndex].quantity--;
-  } else {
-  cart.splice(existingItemIndex, 1);
-  
-  const productCard = document.querySelector(`.product-showcase-item[data-product-id="${productId}"]`);
-  if (productCard) {
-  const addButton = productCard.querySelector('.add-to-cart-btn');
-  if (addButton) {
-  addButton.querySelector('ion-icon').style.color = '';
-  }
-  }
-  }
-  localStorage.setItem('cart', JSON.stringify(cart));
-  updateCartCount();
-  showNotification("Removed from cart");
-  console.log('Item removed from cart:', productId, 'Current cart:', cart);
-  }
-  updateCartDropdown();
-  }
-  
+        const product = getProductById(productId);
+        if (!product) return;
+
+        const existingItem = cart.find(item => item.id === productId);
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({ id: productId, quantity: 1 });
+        }
+        if (addButton) {
+            addButton.querySelector('ion-icon').style.color = '#6f4075';
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateAllCartCounts();
+        showNotification("Added to cart");
+        console.log('Item added to cart:', productId, 'Current cart:', cart);
+        updateCartDropdown();
+    }
+
+    function removeFromCart(productId, listItemOrCard) {
+        const existingItemIndex = cart.findIndex(item => item.id === productId);
+        if (existingItemIndex !== -1) {
+            if (listItemOrCard && listItemOrCard.classList.contains('cart-item') && cartItemsList.contains(listItemOrCard)) {
+                 cartItemsList.removeChild(listItemOrCard);
+            }
+
+            if (cart[existingItemIndex].quantity > 1) {
+                cart[existingItemIndex].quantity--;
+            } else {
+                cart.splice(existingItemIndex, 1);
+                const productCard = document.querySelector(`.product-showcase-item[data-product-id="${productId}"]`);
+                if (productCard) {
+                    const addButton = productCard.querySelector('.add-to-cart-btn');
+                    if (addButton) {
+                        addButton.querySelector('ion-icon').style.color = '';
+                    }
+                }
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateAllCartCounts();
+            showNotification("Removed from cart");
+            console.log('Item removed/decremented:', productId, 'Current cart:', cart);
+        }
+        updateCartDropdown();
+    }
+
+
     function isValidUrl(string) {
-    try {
-    new URL(string);
-    return true;
-    } catch (e) {
-    return false;
+        try {
+            new URL(string);
+            return true;
+        } catch (e) {
+            return false;
+        }
     }
+
+
+    let favoritedProducts = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    function updateAllFavoritesCounts() {
+        const count = favoritedProducts.length;
+        favoritesCountElements.forEach(el => {
+            el.textContent = count;
+        });
+        console.log('Updated favorites count to:', count);
     }
-  
-    
-    let favoritedProducts = JSON.parse(localStorage.getItem('favorites')) ||
-    [];
-  
-    function updateFavoritesCount(count) {
-    const headerHeartCount = document.querySelector('.header-user-buttons .action-button ion-icon[name="heart-outline"] + .item-count');
-    const mobileHeartButtons = document.querySelectorAll('.mobile-bottom-navigation .action-button');
-    let mobileHeartCount = null;
-  
-    mobileHeartButtons.forEach(button => {
-    const icon = button.querySelector('ion-icon[name="heart-outline"]');
-    if (icon) {
-    mobileHeartCount = button.querySelector('.item-count');
-    }
-    });
-    if (headerHeartCount) {
-    headerHeartCount.textContent = count;
-    console.log('Updated header favorites count to:', count);
-    } else {
-    console.warn('Header heart count element not found');
-    }
-  
-    if (mobileHeartCount) {
-    mobileHeartCount.textContent = count;
-    console.log('Updated mobile favorites count to:', count);
-    } else {
-    console.warn('Mobile heart count element not found');
-    }
-    }
-  
+
+
     function createProductCard(product) {
-    const productShowcase = document.createElement('div');
-    productShowcase.classList.add('product-showcase-item');
-    productShowcase.dataset.productId = product.id; 
-  
-    const imageUrl = isValidUrl(product.thumbnail)
-    ? product.thumbnail
-    : 'https://placehold.co/300x300/E5E7EB/1F2937?text=No+Image';
-  
-    const isFavorited = favoritedProducts.includes(product.id.toString());
-    const heartIcon = isFavorited ? 'heart' : 'heart-outline';
-    const favoritedClass = isFavorited ? 'favorited' : '';
-    productShowcase.innerHTML = `
-    <div class="showcase-image-container">
-    <img src="${imageUrl}" alt="${product.title}" width="300" class="product-image default-image">
-    <img src="${imageUrl}" alt="${product.title}" width="300" class="product-image hover-image">
-  
-    <div class="showcase-action-buttons">
-    <button class="action-button add-to-cart-btn">
-    <ion-icon name="bag-handle-outline"></ion-icon> </button>
-    <button class="action-button ${favoritedClass}" title="Favourites" aria-label="Favourites">
-    <ion-icon name="${heartIcon}"></ion-icon>
-    </button>
-    </div>
-    </div>
-  
-    <div class="showcase-details">
-    <a href="#">
-    <h3 class="showcase-title">${product.title}</h3>
-    </a>
-    <div class="price-info">
-    <p class="current-price">$${product.price.toFixed(2)}</p>
-    ${product.discountPercentage
-    ? `<p class="original-price">$${(product.price / (1 - product.discountPercentage / 100)).toFixed(2)}</p>` : ''}
-    </div>
-    </div>
-    `;
-    const imgElements = productShowcase.querySelectorAll('.product-image');
-    imgElements.forEach(img => {
-    img.onerror = function () {
-    this.src = 'https://placehold.co/300x300/E5E7EB/1F2937?text=Image+Error';
-    this.alt = 'Image not available';
-    };
-    });
-    return productShowcase;
+        const productShowcase = document.createElement('div');
+        productShowcase.classList.add('product-showcase-item');
+        productShowcase.dataset.productId = product.id;
+
+        const imageUrl = isValidUrl(product.thumbnail)
+            ? product.thumbnail
+            : 'https://placehold.co/300x300/E5E7EB/1F2937?text=No+Image';
+        const isFavorited = favoritedProducts.includes(product.id.toString());
+        const heartIconName = isFavorited ? 'heart' : 'heart-outline';
+        const favoritedClass = isFavorited ? 'favorited' : '';
+
+        const isInCart = cart.some(item => item.id === product.id);
+        const cartButtonColor = isInCart ? 'style="color: #6f4075;"' : '';
+
+
+        productShowcase.innerHTML = `
+            <div class="showcase-image-container">
+                <img src="${imageUrl}" alt="${product.title}" width="300" class="product-image default-image">
+                <img src="${imageUrl}" alt="${product.title}" width="300" class="product-image hover-image">
+
+                <div class="showcase-action-buttons">
+                    <button class="action-button add-to-cart-btn">
+                        <ion-icon name="bag-handle-outline" ${cartButtonColor}></ion-icon>
+                    </button>
+                    <button class="action-button favorite-btn ${favoritedClass}" title="Favourites" aria-label="Favourites">
+                        <ion-icon name="${heartIconName}"></ion-icon>
+                    </button>
+                </div>
+            </div>
+
+            <div class="showcase-details">
+                <a href="#"> <h3 class="showcase-title">${product.title}</h3>
+                </a>
+                <div class="price-info">
+                    <p class="current-price">$${product.price.toFixed(2)}</p>
+                    ${product.discountPercentage
+                        ? `<p class="original-price">$${(product.price / (1 - product.discountPercentage / 100)).toFixed(2)}</p>`
+                        : ''}
+                </div>
+            </div>
+        `;
+        const imgElements = productShowcase.querySelectorAll('.product-image');
+        imgElements.forEach(img => {
+            img.onerror = function () {
+                this.src = 'https://placehold.co/300x300/E5E7EB/1F2937?text=Image+Error';
+                this.alt = 'Image not available';
+            };
+        });
+        return productShowcase;
     }
-  
+
     function toggleFavorite(productId, favoriteBtn) {
-    productId = productId.toString();
-  
-    const index = favoritedProducts.indexOf(productId);
-    const heartIcon = favoriteBtn.querySelector('ion-icon');
-  
-    if (index === -1) {
-    favoritedProducts.push(productId);
-    favoriteBtn.classList.add('favorited');
-    heartIcon.setAttribute('name', 'heart');
-    console.log('Added product to favorites:', productId);
-    } else {
-    favoritedProducts.splice(index, 1);
-    favoriteBtn.classList.remove('favorited');
-    heartIcon.setAttribute('name', 'heart-outline');
-    console.log('Removed product from favorites:', productId);
+        productId = productId.toString();
+        const index = favoritedProducts.indexOf(productId);
+        const heartIcon = favoriteBtn.querySelector('ion-icon');
+
+        if (index === -1) {
+            favoritedProducts.push(productId);
+            if(favoriteBtn) {
+              favoriteBtn.classList.add('favorited');
+              heartIcon.setAttribute('name', 'heart');
+            }
+            console.log('Added product to favorites:', productId);
+        } else {
+            favoritedProducts.splice(index, 1);
+             if(favoriteBtn) {
+                favoriteBtn.classList.remove('favorited');
+                heartIcon.setAttribute('name', 'heart-outline');
+            }
+            console.log('Removed product from favorites:', productId);
+        }
+
+        localStorage.setItem('favorites', JSON.stringify(favoritedProducts));
+        updateAllFavoritesCounts();
     }
-  
-    localStorage.setItem('favorites', JSON.stringify(favoritedProducts));
-    updateFavoritesCount(favoritedProducts.length);
-    }
-  
+
     function setupLoginLink() {
-    const personButton = document.querySelector('.header-user-buttons .action-button ion-icon[name="person-outline"]');
-  
-    if (personButton) {
-    const parentButton = personButton.closest('.action-button');
-  
-    if (parentButton) {
-    parentButton.addEventListener('click', function () {
-    window.location.href = 'login.html';
-    });
-    parentButton.style.cursor = 'pointer';
-    console.log('Added login link to person icon');
-    } else {
-    console.warn('Could not find parent button for person icon');
+        const personButton = document.querySelector('.header-user-buttons .action-button ion-icon[name="person-outline"]');
+        if (personButton) {
+            const parentButton = personButton.closest('.action-button');
+            if (parentButton) {
+                parentButton.addEventListener('click', function () {
+                    window.location.href = 'login.html';
+                });
+                parentButton.style.cursor = 'pointer';
+                console.log('Added login link to person icon');
+            } else {
+                console.warn('Could not find parent button for person icon');
+            }
+        } else {
+            console.warn('Person icon not found in header');
+        }
     }
-    } else {
-    console.warn('Person icon not found in header');
-    }
-    }
-  
+
     function setupLoadingAnimation() {
-    const loadingOverlay = document.getElementById('loadingOverlay');
-    const navLinks = document.querySelectorAll('nav a');
-  
-    navLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const href = this.getAttribute('href');
-    loadingOverlay.classList.add('visible');
-    setTimeout(function () {
-    if (href && href !== '#') {
-    window.location.href = href;
-    } else {
-    setTimeout(function () {
-    loadingOverlay.classList.remove('visible');
-    }, 100);
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        const navLinks = document.querySelectorAll('nav a, .mobile-navigation-menu a'); 
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href !== '#') { 
+                    e.preventDefault();
+                    loadingOverlay.classList.add('visible');
+                    setTimeout(() => {
+                         window.location.href = href;
+                    }, 1500);
+                } else if (href === '#') {
+                     e.preventDefault();
+                    
+                }
+            });
+        });
+        const siteLogo = document.getElementById('siteLogo');
+        if (siteLogo) {
+            siteLogo.addEventListener('click', function (e) {
+                e.preventDefault();
+                loadingOverlay.classList.add('visible');
+                setTimeout(() => {
+                    loadingOverlay.classList.remove('visible');
+                }, 1500);
+            });
+        }
     }
-    }, 1500);
-    });
-    });
-  
-    const siteLogo = document.getElementById('siteLogo');
-    if (siteLogo) {
-    siteLogo.addEventListener('click', function (e) {
-    e.preventDefault();
-    loadingOverlay.classList.add('visible');
-    setTimeout(function () {
-    setTimeout(function () {
-    loadingOverlay.classList.remove('visible');
-    }, 100);
-    }, 1500);
-    });
-    }
-    }
-  
+
     async function fetchProducts() {
-    try {
-    const response = await fetch(apiUrl);
-    if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            products = data.products;
+
+            displayProducts(products);
+
+        } catch (error) {
+            console.error('Error fetching products:', error);
+            productsContainer.innerHTML = '<p style="color: red; text-align: center; grid-column: 1 / -1;">Failed to load products. Please try again later.</p>';
+        } finally {
+            updateCartDropdown();
+        }
     }
-    const data = await response.json();
-    products = data.products; 
-  
-    productsContainer.innerHTML = '';
-  
-    products.forEach(product => {
-    const productCard = createProductCard(product);
-    productsContainer.appendChild(productCard);
-    });
-  
-    } catch (error) {
-    console.error('Error fetching products:', error);
-    productsContainer.innerHTML = '<p style="color: red; text-align: center; grid-column: 1 / -1;">Failed to load products. Please try again later.</p>';
-    } finally {
-    
-    updateCartDropdown();
-    }
-    }
-  
-    
-  
-    //For Cart dropping down
+
+
+
     function toggleCartDropdown() {
-    cartContainer.classList.toggle('active');
+        cartContainer.classList.toggle('active');
+         if(mobileMenu && mobileMenu.classList.contains('active')) {
+             mobileMenu.classList.remove('active');
+         }
     }
-    
-  document.addEventListener('click', function (event) {
-  if (!cartContainer.contains(event.target) && event.target !== cartButton) {
-  cartContainer.classList.remove('active');
-  }
-  });
-  
-  cartContainer.addEventListener('click', function(event) {
-  event.stopPropagation(); 
-  });
-  
-    
-    cartButton.addEventListener('click', toggleCartDropdown);
 
-   
-  const mobileCartButton = document.querySelector('.mobile-bottom-navigation .action-button ion-icon[name="bag-handle-outline"]').closest('.action-button');
-  if (mobileCartButton) {
-  mobileCartButton.addEventListener('click', toggleCartDropdown);
-  }
-
-  document.addEventListener('click', function (event) {
-  if (!cartContainer.contains(event.target) && !event.target.classList.contains('cart-button')) {
-  cartContainer.classList.remove('active');
-  }
-  });
-  
-    
     document.addEventListener('click', function (event) {
-  if (!cartContainer.contains(event.target) && !event.target.classList.contains('cart-button')) {
-  cartContainer.classList.remove('active');
-  }
-  });
-  
-    
+        const isClickInsideCart = cartContainer.contains(event.target);
+        const isDesktopCartButton = cartButton ? cartButton.contains(event.target) : false;
+        const isMobileCartTrigger = event.target.closest('.mobile-cart-trigger');
+
+        if (!isClickInsideCart && !isDesktopCartButton && !isMobileCartTrigger) {
+           cartContainer.classList.remove('active');
+        }
+    });
+
+    cartContainer.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+
+
+    if (cartButton) {
+        cartButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleCartDropdown();
+        });
+    }
+
+    const mobileCartTrigger = document.querySelector('.mobile-cart-trigger');
+    if (mobileCartTrigger) {
+         mobileCartTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleCartDropdown();
+        });
+    }
+
+
     function updateCartDropdown() {
-    
-    if (!products || products.length === 0) {
-    console.log("Cart update: No products data yet.");
-    return;
+        if (!products || products.length === 0) {
+            console.log("Cart update skipped: Products data not yet available.");
+            return;
+        }
+
+        cartItemsList.innerHTML = '';
+        let total = 0;
+        if (cart.length === 0) {
+            cartItemsList.innerHTML = '<li class="empty-cart">Your cart is empty.</li>';
+        } else {
+            cart.forEach(item => {
+                const product = getProductById(item.id);
+                if (product) {
+                    const listItem = document.createElement('li');
+                    listItem.classList.add('cart-item');
+                    listItem.innerHTML = `
+                        <img src="${product.thumbnail}" alt="${product.title}" class="item-image">
+                        <div class="item-details">
+                            <h4 class="item-title">${product.title}</h4>
+                            <p class="item-price">$${(product.price * item.quantity).toFixed(2)} (${item.quantity})</p>
+                        </div>
+                        <button class="remove-item-btn" data-product-id="${product.id}" aria-label="Remove item">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+                    `;
+                    cartItemsList.appendChild(listItem);
+                    total += product.price * item.quantity;
+                } else {
+                     console.warn(`Product with ID ${item.id} not found for cart item.`);
+                }
+            });
+        }
+        cartTotalAmount.textContent = `$${total.toFixed(2)}`;
+        updateAllCartCounts();
     }
-  
-    cartItemsList.innerHTML = ''; 
-    let total = 0;
-  
-    if (cart.length === 0) {
-    cartItemsList.innerHTML = '<li class="empty-cart">Your cart is empty.</li>';
-    } else {
-    cart.forEach(item => {
-    const product = products.find(p => p.id === item.id); 
-    if (product) {
-    const listItem = document.createElement('li');
-    listItem.classList.add('cart-item');
-    listItem.innerHTML = `
-    <img src="${product.thumbnail}" alt="${product.title}" class="item-image">
-    <div class="item-details">
-    <h4 class="item-title">${product.title}</h4>
-    <p class="item-price">$${(product.price * item.quantity).toFixed(2)} (${item.quantity})</p>
-    </div>
-    <button class="remove-item-btn" data-product-id="${product.id}">
-    <ion-icon name="close-outline"></ion-icon>
-    </button>
-    `;
-    cartItemsList.appendChild(listItem);
-    total += product.price * item.quantity;
-    }
-    });
-    }
-    cartTotalAmount.textContent = `$${total.toFixed(2)}`;
-    updateCartCount(); 
-    }
-  
-    
-    cartItemsList.addEventListener('click', function (event) {
-  if (event.target.classList.contains('remove-item-btn') || event.target.closest('.remove-item-btn')) {
-  const productId = parseInt(event.target.closest('.remove-item-btn').dataset.productId);
-  const listItem = event.target.closest('.cart-item');
-  removeFromCart(productId, listItem);  
-  updateCartDropdown();
-  }
-  });
-  
-    
-  
-    
+
+
     document.addEventListener('click', function (event) {
-    const target = event.target;
-  
-    
-    if (target.closest('.showcase-action-buttons .add-to-cart-btn') || target.closest('.showcase-action-buttons .add-to-cart-btn ion-icon[name="bag-handle-outline"]')) {
-  const productCard = target.closest('.product-showcase-item');
-  if (productCard) {
-  const productId = parseInt(productCard.dataset.productId);
-  const addButton = target.closest('.add-to-cart-btn');
-  const existingCartItem = cart.find(item => item.id === productId);
-  if (!existingCartItem) {
-  addToCart(productId, addButton);
-  }
-  else {
-  
-  removeFromCart(productId, productCard);
-  }
-  }
-  }
-  
-    
-    if (target.closest('.showcase-action-buttons .action-button:not(.add-to-cart-btn)') ||
-    target.closest('.showcase-action-buttons ion-icon[name="heart-outline"]') ||
-    target.closest('.showcase-action-buttons ion-icon[name="heart"]')) {
-    const productCard = target.closest('.product-showcase-item');
-    if (!productCard) return;
-  
-    const productId = productCard.dataset.productId;
-    if (!productId) {
-    console.error('Product ID not found on card:', productCard);
-    return;
-    }
-  
-    const favoriteBtn = productCard.querySelector('.showcase-action-buttons .action-button:not(.add-to-cart-btn)');
-    if (!favoriteBtn) return;
-  
-    toggleFavorite(productId, favoriteBtn);
-    }
+        const removeButton = event.target.closest('.remove-item-btn');
+        if (removeButton) {
+            const productId = parseInt(removeButton.dataset.productId);
+            const listItem = event.target.closest('.cart-item');
+            removeFromCart(productId, listItem);
+        }
     });
-  
-    
-    updateCartCount();
-  
+
+    productsContainer.addEventListener('click', function (event) {
+        const target = event.target;
+
+        const addToCartButton = target.closest('.add-to-cart-btn');
+        if (addToCartButton) {
+            if (!isLoggedIn) {
+                loginRequiredModal.classList.add('active');
+                pageOverlay.classList.add('active');
+                return;
+            }
+
+            const productCard = target.closest('.product-showcase-item');
+            if (productCard) {
+                const productId = parseInt(productCard.dataset.productId);
+                addToCart(productId, addToCartButton);
+            }
+            return;
+        }
+
+        const favoriteButton = target.closest('.favorite-btn');
+        if (favoriteButton) {
+            if (!isLoggedIn) {
+                loginRequiredModal.classList.add('active');
+                 pageOverlay.classList.add('active');
+                return;
+            }
+
+            const productCard = target.closest('.product-showcase-item');
+             if (productCard) {
+                const productId = productCard.dataset.productId;
+                if (productId) {
+                    toggleFavorite(productId, favoriteButton);
+                } else {
+                     console.error('Product ID not found on card for favorite action:', productCard);
+                }
+            }
+             return;
+        }
+    });
+
+    modalLoginButton.addEventListener('click', () => {
+        window.location.href = 'login.html';
+        loginRequiredModal.classList.remove('active');
+        pageOverlay.classList.remove('active');
+    });
+
+    loginRequiredModal.addEventListener('click', function(event) {
+        if (event.target === loginRequiredModal) {
+            loginRequiredModal.classList.remove('active');
+            pageOverlay.classList.remove('active');
+        }
+    });
+
+
     document.addEventListener('DOMContentLoaded', function () {
-    const loadingOverlay = document.getElementById('loadingOverlay');
-  
-    loadingOverlay.classList.add('visible');
-  
-    favoritedProducts = JSON.parse(localStorage.getItem('favorites')) || [];
-    console.log('Initial favorites loaded:', favoritedProducts.length, 'products');
-  
-    setupLoginLink();
-    setupLoadingAnimation();
-    updateFavoritesCount(favoritedProducts.length);
-  
-    fetchProducts().then(() => {
-    setTimeout(function () {
-    loadingOverlay.classList.remove('visible');
-    }, 500);
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        loadingOverlay.classList.add('visible');
+
+        cart = JSON.parse(localStorage.getItem('cart')) || [];
+        favoritedProducts = JSON.parse(localStorage.getItem('favorites')) || [];
+        console.log('Initial cart loaded:', cart.length, 'items');
+        console.log('Initial favorites loaded:', favoritedProducts.length, 'products');
+
+        const loggedInStatus = localStorage.getItem('isLoggedIn');
+        if (loggedInStatus === 'true') {
+            isLoggedIn = true;
+            console.log('User is logged in (status from localStorage).');
+        } else {
+            isLoggedIn = false;
+            console.log('User is not logged in (status from localStorage).');
+        }
+
+
+        setupLoginLink();
+        setupLoadingAnimation();
+        updateAllCartCounts();
+        updateAllFavoritesCounts();
+
+        fetchProducts().then(() => {
+            updateCartDropdown();
+            setTimeout(() => {
+                 loadingOverlay.classList.remove('visible');
+            }, 500);
+        });
+
+
     });
-    });
+
     const searchInput = document.querySelector('.search-input-field');
     const searchDropdown = document.querySelector('.search-dropdown');
     const searchResultsList = document.querySelector('.search-results-list');
-    
-    function displayProducts(results) {
-        productsContainer.innerHTML = '';  
-        if (results.length === 0) {
-            productsContainer.innerHTML = '<p style="color: red; text-align: center; grid-column: 1 / -1;">No products found.</p>';
+    const searchButton = document.querySelector('.header-search-area .search-button');
+
+    const mobileSearchOverlay = document.getElementById('mobileSearchOverlay');
+    const mobileSearchInput = document.querySelector('.mobile-search-input');
+    const mobileSearchCloseButton = document.querySelector('.mobile-search-close-button');
+    const mobileSearchResults = document.querySelector('.mobile-search-results');
+    const mobileSearchContainer = document.querySelector('.mobile-search-container');
+
+
+    function displayProducts(productsToDisplay) {
+        productsContainer.innerHTML = '';
+        if (!productsToDisplay || productsToDisplay.length === 0) {
+            productsContainer.innerHTML = '<p style="color: gray; text-align: center; grid-column: 1 / -1;">No products found matching your criteria.</p>';
             return;
         }
-    
-        results.forEach(product => {
-            const productCard = createProductCard(product); 
+
+        productsToDisplay.forEach(product => {
+            const productCard = createProductCard(product);
             productsContainer.appendChild(productCard);
         });
     }
-    
-    function displaySearchResults(results) {
-    searchResultsList.innerHTML = '';
-    if (results.length === 0) {
-      searchResultsList.innerHTML = '<li>No results found</li>';
-      searchDropdown.classList.remove('active');
-      pageOverlay.classList.remove('active'); 
-      return;
+
+
+    function displayMobileSearchResults(results) {
+        mobileSearchResults.innerHTML = '';
+        if (results.length === 0) {
+            mobileSearchResults.innerHTML = '<li>No results found</li>';
+            return;
+        }
+
+        results.forEach(product => {
+            const li = document.createElement('li');
+            li.dataset.productId = product.id;
+            li.innerHTML = `
+                <img src="${product.thumbnail}" alt="${product.title}" class="search-result-image">
+                <span>${product.title}</span>
+            `;
+            li.addEventListener('click', () => {
+                console.log('Mobile search clicked:', product.title);
+                mobileSearchOverlay.classList.remove('active');
+                mobileSearchInput.value = '';
+
+                const targetProductCard = document.querySelector(`.product-showcase-item[data-product-id="${product.id}"]`);
+                if (targetProductCard) {
+                    targetProductCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+
+            });
+            mobileSearchResults.appendChild(li);
+        });
     }
 
-    results.forEach(product => {
-      const li = document.createElement('li');
-      li.innerHTML = `
-        <img src="${product.thumbnail}" alt="${product.title}" class="search-result-image">
-        ${product.title}
-      `;
-      li.addEventListener('click', () => {
-        
-        console.log('Clicked on:', product.title);
-        searchInput.value = product.title; 
-        searchDropdown.classList.remove('active');
-        pageOverlay.classList.remove('active');  
-      });
-      searchResultsList.appendChild(li);
-    });
-    searchDropdown.classList.add('active');  
-    pageOverlay.classList.add('active'); 
-  }
-
-  searchInput.addEventListener('input', function() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const filteredProducts = products.filter(product => {
-      return product.title.toLowerCase().includes(searchTerm);
-    });
-    displaySearchResults(filteredProducts);
-  });
-
-  document.addEventListener('click', function(event) {
-    if (!event.target.closest('.header-search-area')) {
-      searchDropdown.classList.remove('active');
-      pageOverlay.classList.remove('active'); 
+    if (searchButton) {
+        searchButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileSearchOverlay.classList.add('active');
+            mobileSearchInput.focus();
+            if(cartContainer.classList.contains('active')) {
+                 cartContainer.classList.remove('active');
+            }
+        });
     }
-  });
- 
- const menuOpenButton = document.getElementById('menu-open-button');
-   const menuCloseButton = document.getElementById('menu-close-button');
-   const mobileMenu = document.querySelector('.mobile-navigation-menu');
-   
-   const mobileHomeButton = document.querySelector('.mobile-bottom-navigation a[href="#"]');
 
-   if (menuOpenButton && menuCloseButton && mobileMenu) {
-     menuOpenButton.addEventListener('click', () => {
-       mobileMenu.classList.add('active');
-     });
+    mobileSearchCloseButton.addEventListener('click', () => {
+        mobileSearchOverlay.classList.remove('active');
+    });
 
-     menuCloseButton.addEventListener('click', () => {
-       mobileMenu.classList.remove('active');
-     });
-   }
+    mobileSearchInput.addEventListener('input', () => {
+        const searchTerm = mobileSearchInput.value.toLowerCase().trim();
+         if(searchTerm.length > 0) {
+            const filteredProducts = products.filter(product =>
+                product.title.toLowerCase().includes(searchTerm) ||
+                (product.description && product.description.toLowerCase().includes(searchTerm)) ||
+                (product.category && product.category.toLowerCase().includes(searchTerm))
+            );
+            displayMobileSearchResults(filteredProducts);
+        } else {
+             mobileSearchResults.innerHTML = '';
+        }
+    });
 
-   if (mobileHomeButton && pageOverlay) {
-     mobileHomeButton.addEventListener('click', (event) => {
-       event.preventDefault();
-       pageOverlay.classList.add('visible');
-       window.scrollTo(0, 0);
+    document.addEventListener('click', (event) => {
+      const isClickInsideMobileSearch = mobileSearchContainer.contains(event.target);
+      const isClickOnSearchButton = searchButton ? searchButton.contains(event.target) || event.target === searchButton : false;
 
-       
-     });
-   }
-  
-  
-  
-    </script>
+      if (mobileSearchOverlay.classList.contains('active') && !isClickInsideMobileSearch && !isClickOnSearchButton) {
+        mobileSearchOverlay.classList.remove('active');
+      }
+    });
+
+    mobileSearchContainer.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+
+    function displayDesktopSearchResults(results) {
+        searchResultsList.innerHTML = '';
+        if (results.length === 0) {
+            searchResultsList.innerHTML = '<li>No results found</li>';
+            searchDropdown.classList.add('active');
+            return;
+        }
+
+        results.slice(0, 10).forEach(product => {
+            const li = document.createElement('li');
+            li.dataset.productId = product.id;
+            li.innerHTML = `
+                <img src="${product.thumbnail}" alt="${product.title}" class="search-result-image">
+                 <span>${product.title}</span>
+            `;
+            li.addEventListener('click', () => {
+                console.log('Desktop search clicked:', product.title);
+                searchInput.value = product.title;
+                searchDropdown.classList.remove('active');
+                pageOverlay.classList.remove('active');
+
+                const targetProductCard = document.querySelector(`.product-showcase-item[data-product-id="${product.id}"]`);
+                if (targetProductCard) {
+                    targetProductCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+            searchResultsList.appendChild(li);
+        });
+        searchDropdown.classList.add('active');
+    }
+
+
+    searchInput.addEventListener('input', function() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        if (searchTerm.length > 0) {
+            const filteredProducts = products.filter(product => {
+                return product.title.toLowerCase().includes(searchTerm) ||
+                       (product.category && product.category.toLowerCase().includes(searchTerm));
+            });
+            displayDesktopSearchResults(filteredProducts);
+        } else {
+            searchDropdown.classList.remove('active');
+            pageOverlay.classList.remove('active');
+            if (searchTerm.length === 0) {
+             }
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        const isClickInsideSearchArea = event.target.closest('.header-search-area');
+        const isClickInsideDropdown = event.target.closest('.search-dropdown');
+
+        if (!isClickInsideSearchArea && !isClickInsideDropdown) {
+             searchDropdown.classList.remove('active');
+             const isSearchOverlayActive = pageOverlay.classList.contains('active') && searchDropdown.classList.contains('active');
+             if (isSearchOverlayActive) {
+                pageOverlay.classList.remove('active');
+             } else if (!searchDropdown.classList.contains('active')) {
+                 pageOverlay.classList.remove('active');
+             }
+        }
+    });
+
+
+    const menuOpenButton = document.getElementById('menu-open-button');
+    const menuCloseButton = document.getElementById('menu-close-button');
+    const mobileMenu = document.querySelector('.mobile-navigation-menu');
+    const mobileHomeButton = document.getElementById('mobile-home-button');
+
+
+    if (menuOpenButton && menuCloseButton && mobileMenu) {
+        menuOpenButton.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            if(cartContainer.classList.contains('active')) {
+                 cartContainer.classList.remove('active');
+            }
+        });
+        menuCloseButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+        document.addEventListener('click', (event) => {
+             if (mobileMenu.classList.contains('active') &&
+                 !mobileMenu.contains(event.target) &&
+                 !menuOpenButton.contains(event.target)) {
+                 mobileMenu.classList.remove('active');
+             }
+        });
+
+    }
+
+    if (mobileHomeButton) {
+        mobileHomeButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if(mobileMenu && mobileMenu.classList.contains('active')) {
+                 mobileMenu.classList.remove('active');
+            }
+        });
+    }
+
+
+  </script>
 
 </body>
 
